@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Tense &amp; Verb Reference / রেফারেন্স</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="tutorial.css">
+</head>
+<body class="tutorial-body">
+
+<div class="tut-nav">
+  <a href="index.html" class="lang-en">← Back to Practice</a>
+  <a href="index.html" class="lang-bn">← অনুশীলনে ফিরুন</a>
+</div>
+
+<div class="tut-wrap">
+
+<div class="tut-header">
+  <h1>
+    <span class="lang-en">English Tense &amp; Verb Reference</span>
+    <span class="lang-bn">ইংরেজি টেন্স ও ভার্ব রেফারেন্স</span>
+  </h1>
+  <div class="tut-lang-toggle">
+    <button id="btnEn" data-lang="en">English</button>
+    <button id="btnBn" data-lang="bn">বাংলা</button>
+    <button id="btnPrint" class="tut-print-btn">🖨️</button>
+  </div>
+</div>
+
+<p class="tut-subtitle lang-en">The complete conjugation guide and irregular verb list, exactly as in the source material — used as the "Do" verb example throughout. In the practice sheets, substitute any other verb for "Do" the same way.</p>
+<p class="tut-subtitle lang-bn">মূল ডকুমেন্টের সম্পূর্ণ কনজুগেশন গাইড ও ইরেগুলার ভার্ব লিস্ট, হুবহু — এখানে সবজায়গায় উদাহরণ হিসেবে 'Do' ভার্ব ব্যবহার করা হয়েছে। অনুশীলন শিটে ঠিক এই নিয়মেই 'Do'-এর জায়গায় অন্য যেকোনো ভার্ব বসানো যাবে।</p>
+
+<div id="tenseSections"></div>
+
+<div class="tut-final">
+  <h2><span class="lang-en"><span class="num">✓</span>Irregular Verbs (V1 · V2 · V3)</span><span class="lang-bn"><span class="num">✓</span>ইরেগুলার ভার্ব (V1 · V2 · V3)</span></h2>
+  <div id="irregularSection"></div>
+</div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/settings.js"></script>
+<script>
+  const TENSE_REF_ORDER = [
+    { key: "indefinite", en: "Indefinite", bn: "সাধারণ" },
+    { key: "be", en: "Be Verb (state)", bn: "Be Verb (হয়/আছে)" },
+    { key: "have", en: "Have Verb (possession)", bn: "Have Verb (আছে/ছিল)" },
+    { key: "continuous", en: "Continuous", bn: "চলমান" },
+    { key: "perfect", en: "Perfect", bn: "পুরাঘটিত" },
+    { key: "perfect_continuous", en: "Perfect Continuous", bn: "পুরাঘটিত চলমান" },
+  ];
+  const GROUP_TITLES = {
+    present: { en: "Present Tense", bn: "বর্তমান কাল" },
+    past: { en: "Past Tense", bn: "অতীত কাল" },
+    future: { en: "Future Tense", bn: "ভবিষ্যৎ কাল" },
+  };
+  const SUBJECT_BY_ID = {};
+  SUBJECTS.forEach((s) => (SUBJECT_BY_ID[s.id] = s));
+  const SUBJECT_ORDER = ["i", "we", "you_sg", "you_pl", "he", "she", "it", "they"];
+
+  function cell2(en, bn) {
+    return `<div class="ref-en">${en}</div><div class="ref-bn">${bn}</div>`;
+  }
+
+  function buildTenseTable(group, key, titleEn, titleBn) {
+    const data = TENSE_REFERENCE[group][key];
+    const rows = SUBJECT_ORDER.map((sid) => {
+      const s = SUBJECT_BY_ID[sid];
+      const d = data[sid];
+      return `<tr>
+        <td class="ref-subject">${s.en}<br><span class="bn-sub">${s.bn}</span></td>
+        <td>${cell2(d.pos_en, d.pos_bn)}</td>
+        <td>${cell2(d.neg_en, d.neg_bn)}</td>
+        <td>${cell2(d.int_en, d.int_bn)}</td>
+      </tr>`;
+    }).join("");
+
+    return `
+      <div class="tut-subtable">
+        <h3><span class="lang-en">${titleEn}</span><span class="lang-bn">${titleBn}</span></h3>
+        <table class="ref-table">
+          <thead><tr><th>Subject</th><th>Positive</th><th>Negative</th><th>Interrogative</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  function buildGroupSection(group, index) {
+    const title = GROUP_TITLES[group];
+    const tables = TENSE_REF_ORDER.map((t) => buildTenseTable(group, t.key, t.en, t.bn)).join("");
+    return `
+      <div class="tut-group">
+        <h2><span class="num">${index}</span><span class="lang-en">${title.en}</span><span class="lang-bn">${title.bn}</span></h2>
+        ${tables}
+      </div>`;
+  }
+
+  document.getElementById("tenseSections").innerHTML =
+    buildGroupSection("present", 1) + buildGroupSection("past", 2) + buildGroupSection("future", 3);
+
+  document.getElementById("irregularSection").innerHTML = `
+    <table class="ref-table irregular-ref-table">
+      <thead><tr><th>V1</th><th class="lang-en">Meaning</th><th class="lang-bn">অর্থ</th><th>V2</th><th>V3</th></tr></thead>
+      <tbody>
+        ${IRREGULAR_VERBS.map((v) => `
+          <tr>
+            <td>${v.v1}${v.note ? `<br><span class="note">${v.note}</span>` : ""}</td>
+            <td colspan="2">${v.bn}</td>
+            <td>${v.v2}</td>
+            <td>${v.v3}</td>
+          </tr>`).join("")}
+      </tbody>
+    </table>`;
+
+  function setLang(lang) {
+    document.body.dataset.lang = lang;
+    document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    document.getElementById("btnBn").classList.toggle("active", lang === "bn");
+    const settings = loadSettings();
+    settings.language = lang;
+    saveSettings(settings);
+  }
+
+  document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+  document.getElementById("btnBn").addEventListener("click", () => setLang("bn"));
+  document.getElementById("btnPrint").addEventListener("click", () => window.print());
+
+  setLang(loadSettings().language === "bn" ? "bn" : "en");
+
+  if (window.self !== window.top) {
+    document.querySelector(".tut-nav").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

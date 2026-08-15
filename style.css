@@ -1,0 +1,653 @@
+@page {
+    margin: 15mm;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9e9e9;
+    margin: 0;
+    padding: 0;
+}
+
+/* settings panel (fixed left sidebar) */
+.settings-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 100vh;
+    overflow-y: auto;
+    background: white;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-panel h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tutorial-link {
+    display: block;
+    text-align: center;
+    padding: 8px 10px;
+    background: #f0f0f0;
+    color: #1a1a1a;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tutorial-link:hover {
+    background: #e4e4e4;
+}
+
+.show-answer-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px 10px;
+    background: #f0f0f0;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-answer-btn:hover {
+    background: #e4e4e4;
+}
+
+.settings-panel .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+}
+
+.settings-panel select,
+.settings-panel input[type="number"] {
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* mode tabs */
+.mode-tabs {
+    display: flex;
+    gap: 6px;
+    background: #f0f0f0;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.mode-tab {
+    flex: 1;
+    padding: 8px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: #444;
+    cursor: pointer;
+}
+
+.mode-tab.active {
+    background: #1a1a1a;
+    color: white;
+}
+
+/* chapter nav */
+.chapter-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.chapter-nav button {
+    flex: 1;
+    padding: 6px 4px;
+    font-size: 12px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.chapter-nav button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+.chapter-indicator {
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.chapter-name-label {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* toggle switch (shared) */
+.toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-side-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    inset: 0;
+    background: #ccc;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.switch-slider::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.15s;
+}
+
+.switch input:checked + .switch-slider {
+    background: #1a1a1a;
+}
+
+.switch input:checked + .switch-slider::before {
+    transform: translateX(18px);
+}
+
+/* timer */
+.timer-widget {
+    background: #f7f7f7;
+    border-radius: 6px;
+    padding: 10px;
+    gap: 8px;
+}
+
+.timer-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.timer-controls input {
+    width: 46px;
+    padding: 6px 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.timer-controls span {
+    font-size: 13px;
+    color: #666;
+}
+
+.timer-icon-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    font-size: 13px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.timer-icon-btn + .timer-icon-btn {
+    margin-left: 0;
+}
+
+.timer-display {
+    display: none;
+}
+
+.timer-display.timer-up,
+.timer-display.timer-warning {
+    display: block;
+    color: #d32f2f;
+    font-size: 14px;
+}
+
+/* actions */
+.settings-panel .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.actions button,
+.actions .file-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1 1 calc(50% - 4px);
+}
+
+.actions .file-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+}
+
+.settings-panel .file-btn input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* preview area */
+#sheets {
+    margin-left: 290px;
+    padding: 10px;
+}
+
+#sheets:fullscreen {
+    margin-left: 0;
+    background: #e9e9e9;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+#sheets:fullscreen .page {
+    max-width: 1000px;
+    zoom: 1.2;
+}
+
+.exit-fullscreen-btn {
+    display: none;
+}
+
+#sheets:fullscreen .exit-fullscreen-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.fullscreen-controls {
+    display: none;
+}
+
+#sheets:fullscreen .fullscreen-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.fullscreen-controls #fsGenerateBtn {
+    padding: 6px 14px;
+    font-size: 13px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* sheet page */
+.page {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 18px 24px 24px;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sheet-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sheet-header h1 {
+    font-size: 22px;
+    margin: 0 0 6px;
+}
+
+.header-info-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 13px;
+    color: #444;
+}
+
+.fill-line {
+    display: inline-block;
+    border-bottom: 1px solid #999;
+    min-width: 60px;
+    height: 1em;
+}
+
+.fill-line.short {
+    min-width: 50px;
+}
+
+.chapter-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #f2f4f7;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.chapter-tag {
+    font-weight: bold;
+    color: #555;
+}
+
+.chapter-name {
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.verb-card {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.verb-card-label {
+    color: #666;
+    font-size: 13px;
+}
+
+.verb-given {
+    font-weight: bold;
+}
+
+.verb-arrow {
+    color: #999;
+}
+
+.verb-answer {
+    font-weight: bold;
+}
+
+/* tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+}
+
+.tense-table th,
+.tense-table td,
+.irregular-table th,
+.irregular-table td {
+    border: 1px solid #d0d5dd;
+    padding: 8px 10px;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tense-table th,
+.irregular-table th {
+    background: #f2f4f7;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #444;
+}
+
+.subject-cell {
+    font-weight: bold;
+    white-space: nowrap;
+    background: #fafbfc;
+}
+
+.bn-sub {
+    font-weight: normal;
+    color: #666;
+    font-size: 12px;
+}
+
+.note {
+    font-size: 11px;
+    color: #888;
+}
+
+/* given / answer text */
+.given {
+    font-weight: 600;
+}
+
+.answer {
+    color: transparent;
+    border-bottom: 1.5px solid #94a3b8;
+    padding: 0 2px;
+    cursor: pointer;
+    transition: color 0.1s;
+}
+
+.answer.revealed,
+.show-all-answers .answer {
+    color: #0f172a;
+    border-bottom-color: transparent;
+}
+
+.verb-answer.answer.revealed,
+.show-all-answers .verb-answer.answer {
+    color: inherit;
+}
+
+/* vocabulary card grid */
+.vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 14px;
+    margin-top: 10px;
+}
+
+.vocab-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 4px;
+}
+
+.vocab-given {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.vocab-blank {
+    font-size: 14px;
+}
+
+.vocab-blank .answer {
+    display: inline-block;
+    width: 100%;
+    min-width: 80px;
+}
+
+@media (max-width: 800px) {
+    .vocab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* tutorial modal (shared with abacus pattern) */
+.tut-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.tut-modal-overlay[hidden] {
+    display: none;
+}
+
+.tut-modal {
+    position: relative;
+    background: white;
+    width: 100%;
+    max-width: 960px;
+    height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tut-modal iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.tut-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* print */
+@media print {
+    .tut-modal-overlay { display: none; }
+    .settings-panel { display: none; }
+    body { background: white; padding: 0; }
+    #sheets { margin-left: 0; padding: 0; }
+
+    .page {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0;
+        box-shadow: none;
+        page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; }
+
+    .answer {
+        color: transparent !important;
+    }
+
+    .tense-table, .irregular-table,
+    .chapter-banner, .verb-card, .vocab-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+@media (max-width: 800px) {
+    .settings-panel {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    #sheets {
+        margin-left: 0;
+    }
+}

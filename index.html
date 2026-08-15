@@ -1,44 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Practice</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8fafc;
-            color: #1e293b;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-        }
-        main {
-            text-align: center;
-            padding: 3rem;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-        }
-        h1 {
-            margin: 0 0 0.5rem;
-            font-size: 2.5rem;
-            color: #0f172a;
-        }
-        p {
-            margin: 0;
-            color: #64748b;
-            font-size: 1.1rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Tense &amp; Verb Practice</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1>English Practice</h1>
-        <p>Welcome! Practice your English skills here.</p>
-    </main>
+
+<div class="settings-panel">
+  <h2 id="panelTitle">Settings</h2>
+
+  <button type="button" id="tutorialLink" class="tutorial-link">📘 Reference / রেফারেন্স</button>
+
+  <div class="field">
+    <label id="labelLanguage">Language</label>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="bn">বাংলা</option>
+    </select>
+  </div>
+
+  <div class="mode-tabs" id="modeTabs">
+    <button type="button" class="mode-tab" data-mode="tense" id="modeTenseBtn">Tense Practice</button>
+    <button type="button" class="mode-tab" data-mode="irregular" id="modeIrregularBtn">Irregular Verbs</button>
+    <button type="button" class="mode-tab" data-mode="vocab" id="modeVocabBtn">Vocabulary</button>
+  </div>
+
+  <!-- Tense mode controls -->
+  <div id="tenseControls">
+    <div class="field chapter-nav-field">
+      <label id="labelChapter">Chapter</label>
+      <div class="chapter-nav">
+        <button type="button" id="prevChapterBtn">◀ Prev</button>
+        <span id="chapterIndicator" class="chapter-indicator">1 / 12</span>
+        <button type="button" id="nextChapterBtn">Next ▶</button>
+      </div>
+      <div id="chapterNameLabel" class="chapter-name-label"></div>
+    </div>
+
+    <div class="field">
+      <label id="labelVerb">Verb</label>
+      <select id="verbSelect"></select>
+    </div>
+  </div>
+
+  <!-- Irregular mode controls -->
+  <div id="irregularControls" hidden>
+    <div class="field">
+      <label id="labelVerbCount">Number of verbs</label>
+      <input type="number" id="irregularCountInput" min="1" max="89" value="12">
+    </div>
+  </div>
+
+  <!-- Vocabulary mode controls -->
+  <div id="vocabControls" hidden>
+    <div class="field">
+      <label id="labelVocabCount">Number of words</label>
+      <input type="number" id="vocabCountInput" min="1" max="120" value="20">
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="toggle-row">
+      <label class="switch">
+        <input type="checkbox" id="directionToggle">
+        <span class="switch-slider"></span>
+      </label>
+      <span id="labelDirection" class="toggle-side-label">Translation Direction</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label id="labelPages">Pages</label>
+    <input type="number" id="pagesInput" min="1" max="50" value="1">
+  </div>
+
+  <div class="field">
+    <div class="toggle-row">
+      <label class="switch">
+        <input type="checkbox" id="showHeaderInfoToggle" checked>
+        <span class="switch-slider"></span>
+      </label>
+      <span id="labelShowHeaderInfo" class="toggle-side-label">Show Date/Time/Marks</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <button type="button" id="showAnswerBtn" class="show-answer-btn">👁 Show Answer</button>
+  </div>
+
+  <div class="field timer-widget">
+    <div class="timer-controls">
+      <label id="labelTimer">Timer</label>
+      <input type="number" id="timerMinutesInput" min="1" max="60" value="1">
+      <span id="labelTimerMinutes">Minutes</span>
+      <button type="button" id="timerStartBtn" class="timer-icon-btn">▶</button>
+      <button type="button" id="timerResetBtn" class="timer-icon-btn">↺</button>
+    </div>
+    <div class="timer-display" id="timerDisplay">01:00</div>
+  </div>
+
+  <div class="actions">
+    <button id="generateBtn">🔄 Generate</button>
+    <button id="printBtn">🖨️ Print</button>
+    <button id="fullscreenBtn">⛶ Fullscreen</button>
+    <button id="downloadImageBtn">📷 Save Image</button>
+    <button id="exportBtn">⬇️ Export</button>
+    <label class="file-btn" id="importLabel"><span id="importLabelText">⬆️ Import</span>
+      <input type="file" id="importInput" accept="application/json">
+    </label>
+    <button id="resetBtn">↺ Reset</button>
+  </div>
+</div>
+
+<div id="sheets">
+  <div id="sheetsContent"></div>
+  <button type="button" id="exitFullscreenBtn" class="exit-fullscreen-btn">✕</button>
+  <div id="fullscreenControls" class="fullscreen-controls">
+    <button type="button" id="fsPlayPauseBtn" class="timer-icon-btn">▶</button>
+    <button type="button" id="fsResetBtn" class="timer-icon-btn">↺</button>
+    <button type="button" id="fsGenerateBtn">🔄 Generate</button>
+  </div>
+</div>
+
+<div id="tutorialModal" class="tut-modal-overlay" hidden>
+  <div class="tut-modal">
+    <button type="button" id="tutorialModalClose" class="tut-modal-close">✕</button>
+    <iframe id="tutorialFrame" title="Reference"></iframe>
+  </div>
+</div>
+
+<script src="js/vendor/html2canvas.min.js"></script>
+<script src="js/vendor/jszip.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/render.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
