@@ -80,6 +80,17 @@ body {
     font-size: 13px;
 }
 
+.field-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.field-row > .field {
+    flex: 1;
+    min-width: 0;
+}
+
 .settings-panel select,
 .settings-panel input[type="number"] {
     padding: 6px 8px;
@@ -91,16 +102,18 @@ body {
 /* mode tabs */
 .mode-tabs {
     display: flex;
-    gap: 6px;
+    flex-direction: column;
+    gap: 4px;
     background: #f0f0f0;
     padding: 4px;
     border-radius: 6px;
 }
 
 .mode-tab {
-    flex: 1;
-    padding: 8px 6px;
-    font-size: 12px;
+    width: 100%;
+    text-align: left;
+    padding: 9px 10px;
+    font-size: 13px;
     font-weight: bold;
     border: none;
     border-radius: 4px;
@@ -112,43 +125,6 @@ body {
 .mode-tab.active {
     background: #1a1a1a;
     color: white;
-}
-
-/* chapter nav */
-.chapter-nav {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.chapter-nav button {
-    flex: 1;
-    padding: 6px 4px;
-    font-size: 12px;
-    background: #000;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.chapter-nav button:disabled {
-    background: #bbb;
-    cursor: not-allowed;
-}
-
-.chapter-indicator {
-    font-size: 12px;
-    color: #666;
-    white-space: nowrap;
-}
-
-.chapter-name-label {
-    margin-top: 4px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #1a1a1a;
 }
 
 /* toggle switch (shared) */
@@ -253,14 +229,14 @@ body {
 }
 
 .timer-display {
+    /* countdown now shown on the page itself (title-timer), not
+       duplicated in the sidebar */
     display: none;
 }
 
 .timer-display.timer-up,
 .timer-display.timer-warning {
-    display: block;
     color: #d32f2f;
-    font-size: 14px;
 }
 
 /* actions */
@@ -271,8 +247,7 @@ body {
     margin-top: 4px;
 }
 
-.actions button,
-.actions .file-btn {
+.actions button {
     padding: 8px 10px;
     font-size: 13px;
     white-space: nowrap;
@@ -281,21 +256,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    flex: 1 1 calc(50% - 4px);
-}
-
-.actions .file-btn {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-}
-
-.settings-panel .file-btn input[type="file"] {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    cursor: pointer;
+    flex: 1 1 100%;
 }
 
 /* preview area */
@@ -389,47 +350,6 @@ body {
     margin: 0 0 6px;
 }
 
-.header-info-row {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    font-size: 13px;
-    color: #444;
-}
-
-.fill-line {
-    display: inline-block;
-    border-bottom: 1px solid #999;
-    min-width: 60px;
-    height: 1em;
-}
-
-.fill-line.short {
-    min-width: 50px;
-}
-
-.chapter-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #f2f4f7;
-    border-radius: 6px;
-    padding: 6px 10px;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.chapter-tag {
-    font-weight: bold;
-    color: #555;
-}
-
-.chapter-name {
-    font-weight: bold;
-    color: #0f172a;
-}
-
 .verb-card {
     display: flex;
     align-items: baseline;
@@ -464,9 +384,7 @@ table {
 }
 
 .tense-table th,
-.tense-table td,
-.irregular-table th,
-.irregular-table td {
+.tense-table td {
     border: 1px solid #d0d5dd;
     padding: 8px 10px;
     font-size: 14px;
@@ -474,8 +392,7 @@ table {
     vertical-align: top;
 }
 
-.tense-table th,
-.irregular-table th {
+.tense-table th {
     background: #f2f4f7;
     font-size: 13px;
     text-transform: uppercase;
@@ -524,42 +441,427 @@ table {
     color: inherit;
 }
 
-/* vocabulary card grid */
-.vocab-grid {
+/* vocab-page fills the available viewport height; vocab-list (flex: 1)
+   absorbs whatever's left after the header/banner, so sizing adapts to
+   the actual rendered chrome instead of a guessed pixel offset. */
+.vocab-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px); /* #sheets padding + .page margin */
+}
+
+/* on-page header: [Prev]  Topic/Category name  [Next] — stays inside
+   #sheets so it still works in fullscreen, where the settings sidebar
+   (a sibling of #sheets) isn't reachable */
+.vocab-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.vocab-header-title {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+.vocab-header-title h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.onpage-prev-topic,
+.onpage-next-topic,
+.onpage-prev-pos,
+.onpage-next-pos,
+.onpage-prev-chapter,
+.onpage-next-chapter {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: bold;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.onpage-prev-topic svg,
+.onpage-next-topic svg,
+.onpage-prev-pos svg,
+.onpage-next-pos svg,
+.onpage-prev-chapter svg,
+.onpage-next-chapter svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+}
+
+.onpage-prev-topic:hover:not(:disabled),
+.onpage-next-topic:hover:not(:disabled),
+.onpage-prev-pos:hover:not(:disabled),
+.onpage-next-pos:hover:not(:disabled),
+.onpage-prev-chapter:hover:not(:disabled),
+.onpage-next-chapter:hover:not(:disabled) {
+    background: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.onpage-prev-topic:active:not(:disabled),
+.onpage-next-topic:active:not(:disabled),
+.onpage-prev-pos:active:not(:disabled),
+.onpage-next-pos:active:not(:disabled),
+.onpage-prev-chapter:active:not(:disabled),
+.onpage-next-chapter:active:not(:disabled) {
+    transform: scale(0.96);
+}
+
+.onpage-prev-topic:disabled,
+.onpage-next-topic:disabled,
+.onpage-prev-pos:disabled,
+.onpage-next-pos:disabled,
+.onpage-prev-chapter:disabled,
+.onpage-next-chapter:disabled {
+    background: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* within-topic word pager (only appears when a topic has more words
+   than fit on one page) — separate from the topic Prev/Next, which
+   always moves between topics */
+.word-page-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    align-self: center;
+    margin-top: 12px;
+    padding: 4px;
+    background: #f3f4f6;
+    border-radius: 999px;
+}
+
+.word-page-indicator {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    padding: 0 12px;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.onpage-prev-wordpage,
+.onpage-next-wordpage,
+.onpage-prev-column,
+.onpage-next-column,
+.onpage-prev-regularpage,
+.onpage-next-regularpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.onpage-prev-wordpage svg,
+.onpage-next-wordpage svg,
+.onpage-prev-column svg,
+.onpage-next-column svg,
+.onpage-prev-regularpage svg,
+.onpage-next-regularpage svg {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.onpage-prev-wordpage:hover:not(:disabled),
+.onpage-next-wordpage:hover:not(:disabled),
+.onpage-prev-column:hover:not(:disabled),
+.onpage-next-column:hover:not(:disabled),
+.onpage-prev-regularpage:hover:not(:disabled),
+.onpage-next-regularpage:hover:not(:disabled) {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.onpage-prev-wordpage:active:not(:disabled),
+.onpage-next-wordpage:active:not(:disabled),
+.onpage-prev-column:active:not(:disabled),
+.onpage-next-column:active:not(:disabled),
+.onpage-prev-regularpage:active:not(:disabled),
+.onpage-next-regularpage:active:not(:disabled) {
+    transform: scale(0.9);
+}
+
+.onpage-prev-wordpage:disabled,
+.onpage-next-wordpage:disabled,
+.onpage-prev-column:disabled,
+.onpage-next-column:disabled,
+.onpage-prev-regularpage:disabled,
+.onpage-next-regularpage:disabled {
+    background: transparent;
+    box-shadow: none;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* live timer shown in the sheet header, in place of the printed
+   Date/Time Limit/Marks blanks — visible in fullscreen since it's part
+   of the page content, not the (hidden-in-fullscreen) settings sidebar */
+.title-timer {
+    font-size: min(3vh, 28px);
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    color: #1a1a1a;
+}
+
+.title-timer.timer-up,
+.title-timer.timer-warning {
+    color: #d32f2f;
+}
+
+.timer-bar {
+    max-width: 220px;
+    height: 6px;
+    margin: 6px auto 0;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.timer-bar-fill {
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    transition: width 1s linear, background 0.2s;
+}
+
+.timer-bar-fill.timer-warning,
+.timer-bar-fill.timer-up {
+    background: #d32f2f;
+}
+
+/* vocabulary list: 2 columns x 5 rows (10 per page), filled column-first.
+   When a topic needs more than one 10-word block, only the single block
+   (:only-of-type) stretches to fill the screen — multiple blocks size to
+   their natural content height and the page scrolls, rather than every
+   block splitting the same space (which made cards shrink to fit). */
+.vocab-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px 14px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    align-content: start;
+    gap: min(1.6vh, 16px) 20px;
     margin-top: 10px;
+    min-height: 0;
+}
+
+.vocab-list:only-of-type {
+    flex: 1;
+}
+
+.vocab-list + .vocab-list {
+    margin-top: 20px;
+}
+
+#sheets:fullscreen .vocab-page {
+    zoom: 1; /* the 1.2x page zoom is for abacus-style dense sheets; vocab
+                already scales its own text via vh units, so disable it
+                here to keep the height math exact and avoid clipping */
+    max-width: 1200px;
+    /* fullscreen padding (60) + page margin (20) + floating controls
+       clearance (90) */
+    min-height: calc(100vh - 170px);
+}
+
+@media (max-width: 700px) {
+    .vocab-page {
+        min-height: auto;
+    }
+    .vocab-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+        flex: none;
+    }
+}
+
+@property --border-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --glow-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #4285f4;
 }
 
 .vocab-card {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 8px 4px;
+    justify-content: center;
+    gap: min(0.8vh, 6px);
+    border: 3px solid transparent;
+    border-radius: 16px;
+    padding: min(1.6vh, 14px) 24px;
+    min-height: 0;
+    cursor: pointer;
+    background:
+        linear-gradient(#f3f4f6, #f3f4f6) padding-box,
+        linear-gradient(#f3f4f6, #f3f4f6) border-box;
+    box-shadow: 0 0 0 0 transparent;
+    transition: background 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* Gemini-style animated gradient border: a conic gradient spun around
+   the border via an animated angle custom property (revealed only
+   through the border-box layer, so the card's own interior background
+   never shifts), plus a glowing box-shadow cycling through the same
+   colors — box-shadow always paints behind the card's own background,
+   so unlike a blurred pseudo-element it can't wash out the text. */
+.vocab-card:hover,
+.vocab-card:active,
+.vocab-card.active {
+    --border-angle: 0deg;
+    --glow-color: #4285f4;
+    background:
+        linear-gradient(#f3f4f6, #f3f4f6) padding-box,
+        conic-gradient(from var(--border-angle), #4285f4, #9b72cb, #d96570, #4285f4) border-box;
+    box-shadow: 0 0 16px 3px var(--glow-color);
+    animation: vocab-card-border-spin 3s linear infinite, vocab-card-glow-pulse 3s linear infinite;
+}
+
+@keyframes vocab-card-border-spin {
+    to { --border-angle: 360deg; }
+}
+
+@keyframes vocab-card-glow-pulse {
+    0% { --glow-color: #4285f4; }
+    34% { --glow-color: #9b72cb; }
+    67% { --glow-color: #d96570; }
+    100% { --glow-color: #4285f4; }
+}
+
+/* icon + number + given text always sit together on one row, whether or
+   not the answer line below is revealed — the icon used to be centered
+   against the *whole* two-line block, so it visually floated between
+   the lines once the answer appeared. Now the answer is a separate row
+   entirely, so this row's height (and the icon's position in it) never
+   changes. */
+.vocab-card-row {
+    display: flex;
+    align-items: center;
+    gap: min(2.5vh, 20px);
+    min-width: 0;
+}
+
+.vocab-number {
+    flex-shrink: 0;
+    min-width: 1.4em;
+    text-align: right;
+    font-size: min(2vh, 16px);
+    font-weight: 700;
+    color: #aab0bb;
+    font-variant-numeric: tabular-nums;
+}
+
+.vocab-icon-circle {
+    flex-shrink: 0;
+    /* vh-based so it shrinks with available height, not card width —
+       a fixed/width-based size was the floor that caused fullscreen
+       overflow (5 rows no longer fit once the icon stopped shrinking) */
+    width: min(5.5vh, 64px);
+    height: min(5.5vh, 64px);
+    border-radius: 50%;
+    background: #e0eefc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: min(3vh, 34px);
+    line-height: 1;
 }
 
 .vocab-given {
-    font-size: 14px;
-    font-weight: 600;
+    min-width: 0;
+    font-size: min(3.2vh, 26px);
+    font-weight: 700;
     color: #0f172a;
+    line-height: 1.15;
 }
 
 .vocab-blank {
-    font-size: 14px;
+    /* indent to line up under the given text, not the number/icon */
+    padding-left: calc(1.4em + min(2.5vh, 20px) + min(5.5vh, 64px) + min(2.5vh, 20px));
+    font-size: min(2.4vh, 20px);
+    /* collapsed until revealed, so a hidden card is just its icon+word
+       row — no reserved blank space — and only grows once the answer
+       actually appears */
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease, opacity 0.15s ease, margin-top 0.2s ease;
+}
+
+.vocab-blank.revealed,
+.show-all-answers .vocab-blank {
+    max-height: 2.2em;
+    opacity: 1;
+    margin-top: 4px;
+}
+
+.pos-card .vocab-blank {
+    /* pos cards have no number, just the icon */
+    padding-left: calc(min(5.5vh, 64px) + min(2.5vh, 20px));
+}
+
+/* Regular Verbs: V1 → V2 → V3 chained in the given line, same card as
+   Vocabulary (icon + number + one given/answer pair), but one full-width
+   card per row instead of the usual 2-column/5-row vocab grid. */
+.verb-form-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+}
+
+.verb-form-note {
+    font-size: 0.65em;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.verb-form-arrow {
+    color: #94a3b8;
+    font-weight: 400;
+    padding: 0 0.15em;
 }
 
 .vocab-blank .answer {
     display: inline-block;
-    width: 100%;
-    min-width: 80px;
+    min-width: 100px;
+    border-bottom: none;
 }
 
-@media (max-width: 800px) {
-    .vocab-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 /* tutorial modal (shared with abacus pattern) */
 .tut-modal-overlay {
@@ -609,6 +911,239 @@ table {
     z-index: 1;
 }
 
+/* parts of speech */
+.pos-definition {
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    margin: -4px 0 10px;
+}
+
+.pos-sentence {
+    font-size: min(2.6vh, 20px) !important;
+    font-weight: 500 !important;
+    line-height: 1.4;
+}
+
+.pos-target {
+    color: #0f172a;
+    text-decoration: underline;
+    text-decoration-color: #94a3b8;
+    text-underline-offset: 3px;
+}
+
+/* synonyms & antonyms */
+.synant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .synant-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.synant-card {
+    background: #f3f4f6;
+    border-radius: 14px;
+    padding: 14px 20px;
+}
+
+.synant-word {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.synant-bn {
+    font-weight: normal;
+    color: #666;
+    font-size: 14px;
+}
+
+.synant-row {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.synant-label {
+    color: #666;
+    margin-right: 4px;
+}
+
+/* sentence structure reference */
+.pattern-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.pattern-card {
+    background: #f3f4f6;
+    border-radius: 14px;
+    padding: 16px 22px;
+}
+
+.pattern-formula {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.pattern-formula-bn {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.pattern-examples {
+    margin: 10px 0 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* quiz mode */
+.quiz-page {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.quiz-empty-msg {
+    color: #666;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.quiz-progress {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+}
+
+.quiz-hint {
+    color: #888;
+    font-size: 13px;
+    margin-top: 14px;
+}
+
+.quiz-question {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 10px auto 20px;
+    max-width: 640px;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+.quiz-option {
+    padding: 14px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    background: #f3f4f6;
+    color: #1a1a1a;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.quiz-option:hover:not(:disabled) {
+    background: #e9eaed;
+}
+
+.quiz-option:disabled {
+    cursor: default;
+}
+
+.quiz-option.correct {
+    background: #dcfce7;
+    border-color: #22c55e;
+    color: #14532d;
+}
+
+.quiz-option.incorrect {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #7f1d1d;
+}
+
+.quiz-feedback {
+    margin: 18px auto 0;
+    font-size: 15px;
+    font-weight: 700;
+    max-width: 640px;
+}
+
+.quiz-feedback-correct {
+    color: #15803d;
+}
+
+.quiz-feedback-incorrect {
+    color: #b91c1c;
+}
+
+.quiz-next-btn {
+    margin-top: 18px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.quiz-results {
+    padding-top: 40px;
+}
+
+.quiz-score-big {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 20px;
+}
+
+.quiz-score-pct {
+    font-size: 18px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.quiz-retry-btn {
+    margin-top: 26px;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 /* print */
 @media print {
     .tut-modal-overlay { display: none; }
@@ -629,13 +1164,48 @@ table {
         color: transparent !important;
     }
 
-    .tense-table, .irregular-table,
-    .chapter-banner, .verb-card, .vocab-card {
+    .vocab-blank {
+        /* a printed worksheet still needs the blank line reserved to
+           write on, regardless of the on-screen collapsed/revealed state */
+        max-height: none !important;
+        opacity: 1 !important;
+        margin-top: 4px !important;
+        overflow: visible !important;
+    }
+
+    .tense-table,
+    .verb-card, .vocab-card {
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .vocab-page {
+        min-height: auto;
+    }
+    .vocab-list:only-of-type {
+        flex: none;
+    }
+    .vocab-list:not(:last-of-type),
+    .synant-grid:not(:last-of-type) {
+        page-break-after: always;
+    }
+    .onpage-prev-topic,
+    .onpage-next-topic,
+    .onpage-prev-pos,
+    .onpage-next-pos,
+    .onpage-prev-chapter,
+    .onpage-next-chapter,
+    .word-page-nav,
+    .title-timer {
+        display: none;
+    }
+
+    .synant-card, .pattern-card, .pos-card {
         break-inside: avoid;
         page-break-inside: avoid;
     }

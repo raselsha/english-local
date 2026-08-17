@@ -2,14 +2,21 @@ const STORAGE_KEY = "englishPracticeSettings";
 
 const DEFAULT_SETTINGS = {
   language: "en",
-  mode: "tense", // "tense" | "irregular" | "vocab"
+  mode: "tense", // "tense" | "regularVerbs" | "vocab" | "pos" | "synonyms" | "sentence" | "quiz"
   chapterIndex: 0, // index into CHAPTERS (tense mode)
+  tenseColumnIndex: 0, // 0=positive, 1=negative, 2=interrogative
   verb: "write", // current verb for tense mode
   direction: "en_bn", // "en_bn" | "bn_en"
-  irregularCount: 12,
+  regularVerbsPage: 0, // which batch of `regularVerbsCount` verbs
+  regularVerbsCount: 20,
+  vocabTopicIndex: 0, // index into VOCAB_TOPICS
+  vocabWordPage: 0, // which batch of `vocabCount` words within the topic
   vocabCount: 20,
-  pages: 1,
-  showHeaderInfo: true,
+  possessivePronoun: "my", // id into POSSESSIVE_PRONOUNS
+  posCategoryIndex: 0, // index into PARTS_OF_SPEECH
+  synonymsCount: 10,
+  quizPool: "vocab", // id into QUIZ_POOLS
+  quizCount: 10,
   showAnswers: false,
 };
 
@@ -26,29 +33,4 @@ function loadSettings() {
 
 function saveSettings(settings) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
-}
-
-function exportSettingsJSON(settings) {
-  const blob = new Blob([JSON.stringify(settings, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "english-practice-settings.json";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
-
-function importSettingsJSON(file, onLoaded) {
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const parsed = JSON.parse(reader.result);
-      onLoaded({ ...DEFAULT_SETTINGS, ...parsed });
-    } catch (e) {
-      alert("Invalid settings JSON file.");
-    }
-  };
-  reader.readAsText(file);
 }

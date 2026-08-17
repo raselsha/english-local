@@ -664,19 +664,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He does",
-        "pos_bn": "সে (পু) করে",
+        "pos_bn": "সে (পুরুষ) করে",
         "neg_en": "He does not do",
-        "neg_bn": "সে (পু) করে না",
+        "neg_bn": "সে (পুরুষ) করে না",
         "int_en": "Does he do?",
-        "int_bn": "সে কি (পু) করে?"
+        "int_bn": "সে কি (পুরুষ) করে?"
       },
       "she": {
         "pos_en": "She does",
-        "pos_bn": "সে (ম) করে",
+        "pos_bn": "সে (মহিলা) করে",
         "neg_en": "She does not do",
-        "neg_bn": "সে (ম) করে না",
+        "neg_bn": "সে (মহিলা) করে না",
         "int_en": "Does she do?",
-        "int_bn": "সে কি (ম) করে?"
+        "int_bn": "সে কি (মহিলা) করে?"
       },
       "it": {
         "pos_en": "It does",
@@ -730,19 +730,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He is ...",
-        "pos_bn": "সে (পু) ...",
+        "pos_bn": "সে (পুরুষ) ...",
         "neg_en": "He is not ...",
-        "neg_bn": "সে (পু) নয় ...",
+        "neg_bn": "সে (পুরুষ) নয় ...",
         "int_en": "Is he ...?",
-        "int_bn": "সে কি (পু) ...?"
+        "int_bn": "সে কি (পুরুষ) ...?"
       },
       "she": {
         "pos_en": "She is ...",
-        "pos_bn": "সে (ম) ...",
+        "pos_bn": "সে (মহিলা) ...",
         "neg_en": "She is not ...",
-        "neg_bn": "সে (ম) নয় ...",
+        "neg_bn": "সে (মহিলা) নয় ...",
         "int_en": "Is she ...?",
-        "int_bn": "সে কি (ম) ...?"
+        "int_bn": "সে কি (মহিলা) ...?"
       },
       "it": {
         "pos_en": "It is ...",
@@ -796,19 +796,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He has ...",
-        "pos_bn": "তার (পু) ... আছে",
+        "pos_bn": "তার (পুরুষ) ... আছে",
         "neg_en": "He has not ...",
-        "neg_bn": "তার (পু) ... নাই",
+        "neg_bn": "তার (পুরুষ) ... নাই",
         "int_en": "Has he ...?",
-        "int_bn": "তার (পু) কি ... আছে?"
+        "int_bn": "তার (পুরুষ) কি ... আছে?"
       },
       "she": {
         "pos_en": "She has ...",
-        "pos_bn": "তার (ম) ... আছে",
+        "pos_bn": "তার (মহিলা) ... আছে",
         "neg_en": "She has not ...",
-        "neg_bn": "তার (ম) ... নাই",
+        "neg_bn": "তার (মহিলা) ... নাই",
         "int_en": "Has she ...?",
-        "int_bn": "তার (ম) কি ... আছে?"
+        "int_bn": "তার (মহিলা) কি ... আছে?"
       },
       "it": {
         "pos_en": "It has ...",
@@ -862,19 +862,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He is doing",
-        "pos_bn": "সে (পু) করতেছে",
+        "pos_bn": "সে (পুরুষ) করতেছে",
         "neg_en": "He is not doing",
-        "neg_bn": "সে (পু) করতেছে না",
+        "neg_bn": "সে (পুরুষ) করতেছে না",
         "int_en": "Is he doing?",
-        "int_bn": "সে কি (পু) করতেছে?"
+        "int_bn": "সে কি (পুরুষ) করতেছে?"
       },
       "she": {
         "pos_en": "She is doing",
-        "pos_bn": "সে (ম) করতেছে",
+        "pos_bn": "সে (মহিলা) করতেছে",
         "neg_en": "She is not doing",
-        "neg_bn": "সে (ম) করতেছে না",
+        "neg_bn": "সে (মহিলা) করতেছে না",
         "int_en": "Is she doing?",
-        "int_bn": "সে কি (ম) করতেছে?"
+        "int_bn": "সে কি (মহিলা) করতেছে?"
       },
       "it": {
         "pos_en": "It is doing",
@@ -928,19 +928,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He has done",
-        "pos_bn": "সে (পু) করেছে",
+        "pos_bn": "সে (পুরুষ) করেছে",
         "neg_en": "He has not done",
-        "neg_bn": "সে (পু) করে নাই",
+        "neg_bn": "সে (পুরুষ) করে নাই",
         "int_en": "Has he done?",
-        "int_bn": "সে (পু) কি করেছে?"
+        "int_bn": "সে (পুরুষ) কি করেছে?"
       },
       "she": {
         "pos_en": "She has done",
-        "pos_bn": "সে (ম) করেছে",
+        "pos_bn": "সে (মহিলা) করেছে",
         "neg_en": "She has not done",
-        "neg_bn": "সে (ম) করে নাই",
+        "neg_bn": "সে (মহিলা) করে নাই",
         "int_en": "Has she done?",
-        "int_bn": "সে (ম) কি করেছে?"
+        "int_bn": "সে (মহিলা) কি করেছে?"
       },
       "it": {
         "pos_en": "It has done",
@@ -994,19 +994,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He has been doing for/since ...",
-        "pos_bn": "সে (পু) ... ধরে করছে",
+        "pos_bn": "সে (পুরুষ) ... ধরে করছে",
         "neg_en": "He has not been doing for/since ...",
-        "neg_bn": "সে (পু) ... ধরে করছে না",
+        "neg_bn": "সে (পুরুষ) ... ধরে করছে না",
         "int_en": "Has he been doing for/since ...?",
-        "int_bn": "সে (পু) কি ... ধরে করছে?"
+        "int_bn": "সে (পুরুষ) কি ... ধরে করছে?"
       },
       "she": {
         "pos_en": "She has been doing for/since ...",
-        "pos_bn": "সে (ম) ... ধরে করছে",
+        "pos_bn": "সে (মহিলা) ... ধরে করছে",
         "neg_en": "She has not been doing for/since ...",
-        "neg_bn": "সে (ম) ... ধরে করছে না",
+        "neg_bn": "সে (মহিলা) ... ধরে করছে না",
         "int_en": "Has she been doing for/since ...?",
-        "int_bn": "সে (ম) কি ... ধরে করছে?"
+        "int_bn": "সে (মহিলা) কি ... ধরে করছে?"
       },
       "it": {
         "pos_en": "It has been doing for/since ...",
@@ -1062,19 +1062,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He did",
-        "pos_bn": "সে (পু) করল",
+        "pos_bn": "সে (পুরুষ) করল",
         "neg_en": "He did not do",
-        "neg_bn": "সে (পু) করল না",
+        "neg_bn": "সে (পুরুষ) করল না",
         "int_en": "Did he do?",
-        "int_bn": "সে কি (পু) করল?"
+        "int_bn": "সে কি (পুরুষ) করল?"
       },
       "she": {
         "pos_en": "She did",
-        "pos_bn": "সে (ম) করল",
+        "pos_bn": "সে (মহিলা) করল",
         "neg_en": "She did not do",
-        "neg_bn": "সে (ম) করল না",
+        "neg_bn": "সে (মহিলা) করল না",
         "int_en": "Did she do?",
-        "int_bn": "সে কি (ম) করল?"
+        "int_bn": "সে কি (মহিলা) করল?"
       },
       "it": {
         "pos_en": "It did",
@@ -1128,19 +1128,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He was ...",
-        "pos_bn": "সে (পু) ... ছিল",
+        "pos_bn": "সে (পুরুষ) ... ছিল",
         "neg_en": "He was not ...",
-        "neg_bn": "সে (পু) ... ছিল না",
+        "neg_bn": "সে (পুরুষ) ... ছিল না",
         "int_en": "Is he ...?",
-        "int_bn": "সে কি (পু) ... ছিল?"
+        "int_bn": "সে কি (পুরুষ) ... ছিল?"
       },
       "she": {
         "pos_en": "She was ...",
-        "pos_bn": "সে (ম) ... ছিল",
+        "pos_bn": "সে (মহিলা) ... ছিল",
         "neg_en": "She was not ...",
-        "neg_bn": "সে (ম) ... ছিল না",
+        "neg_bn": "সে (মহিলা) ... ছিল না",
         "int_en": "Is she ...?",
-        "int_bn": "সে কি (ম) ... ছিল?"
+        "int_bn": "সে কি (মহিলা) ... ছিল?"
       },
       "it": {
         "pos_en": "It was ...",
@@ -1194,19 +1194,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He had ...",
-        "pos_bn": "তার (পু) ... ছিল",
+        "pos_bn": "তার (পুরুষ) ... ছিল",
         "neg_en": "He had not ...",
-        "neg_bn": "তার (পু) ... ছিল না",
+        "neg_bn": "তার (পুরুষ) ... ছিল না",
         "int_en": "Had he ...?",
-        "int_bn": "তার (পু) কি ... ছিল?"
+        "int_bn": "তার (পুরুষ) কি ... ছিল?"
       },
       "she": {
         "pos_en": "She had ...",
-        "pos_bn": "তার (ম) ... ছিল",
+        "pos_bn": "তার (মহিলা) ... ছিল",
         "neg_en": "She had not ...",
-        "neg_bn": "তার (ম) ... ছিল না",
+        "neg_bn": "তার (মহিলা) ... ছিল না",
         "int_en": "Had she ...?",
-        "int_bn": "তার (ম) কি ... ছিল?"
+        "int_bn": "তার (মহিলা) কি ... ছিল?"
       },
       "it": {
         "pos_en": "It had ...",
@@ -1260,19 +1260,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He was doing",
-        "pos_bn": "সে (পু) করতেছিল",
+        "pos_bn": "সে (পুরুষ) করতেছিল",
         "neg_en": "He was not doing",
-        "neg_bn": "সে (পু) করতেছিল না",
+        "neg_bn": "সে (পুরুষ) করতেছিল না",
         "int_en": "Was he doing?",
-        "int_bn": "সে কি (পু) করতেছিল?"
+        "int_bn": "সে কি (পুরুষ) করতেছিল?"
       },
       "she": {
         "pos_en": "She was doing",
-        "pos_bn": "সে (ম) করতেছিল",
+        "pos_bn": "সে (মহিলা) করতেছিল",
         "neg_en": "She was not doing",
-        "neg_bn": "সে (ম) করতেছিল না",
+        "neg_bn": "সে (মহিলা) করতেছিল না",
         "int_en": "Was she doing?",
-        "int_bn": "সে কি (ম) করতেছিল?"
+        "int_bn": "সে কি (মহিলা) করতেছিল?"
       },
       "it": {
         "pos_en": "It was doing",
@@ -1326,19 +1326,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He had done",
-        "pos_bn": "সে (পু) করেছিল",
+        "pos_bn": "সে (পুরুষ) করেছিল",
         "neg_en": "He had not done",
-        "neg_bn": "সে (পু) করেছিল না",
+        "neg_bn": "সে (পুরুষ) করেছিল না",
         "int_en": "Had he done?",
-        "int_bn": "সে কি (পু) করেছিল?"
+        "int_bn": "সে কি (পুরুষ) করেছিল?"
       },
       "she": {
         "pos_en": "She had done",
-        "pos_bn": "সে (ম) করেছিল",
+        "pos_bn": "সে (মহিলা) করেছিল",
         "neg_en": "She had not done",
-        "neg_bn": "সে (ম) করেছিল না",
+        "neg_bn": "সে (মহিলা) করেছিল না",
         "int_en": "Had she done?",
-        "int_bn": "সে কি (ম) করেছিল?"
+        "int_bn": "সে কি (মহিলা) করেছিল?"
       },
       "it": {
         "pos_en": "It had done",
@@ -1392,19 +1392,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He had been doing for/since ...",
-        "pos_bn": "সে (পু) ... ধরে করতেছিল",
+        "pos_bn": "সে (পুরুষ) ... ধরে করতেছিল",
         "neg_en": "He had not been doing for/since ...",
-        "neg_bn": "সে (পু) ... ধরে করতেছিল না",
+        "neg_bn": "সে (পুরুষ) ... ধরে করতেছিল না",
         "int_en": "Had he been doing for/since ...?",
-        "int_bn": "সে কি (পু) ... ধরে করতেছিল?"
+        "int_bn": "সে কি (পুরুষ) ... ধরে করতেছিল?"
       },
       "she": {
         "pos_en": "She had been doing for/since ...",
-        "pos_bn": "সে (ম) ... ধরে করতেছিল",
+        "pos_bn": "সে (মহিলা) ... ধরে করতেছিল",
         "neg_en": "She had not been doing for/since ...",
-        "neg_bn": "সে (ম) ... ধরে করতেছিল না",
+        "neg_bn": "সে (মহিলা) ... ধরে করতেছিল না",
         "int_en": "Had she been doing for/since ...?",
-        "int_bn": "সে কি (ম) ... ধরে করতেছিল?"
+        "int_bn": "সে কি (মহিলা) ... ধরে করতেছিল?"
       },
       "it": {
         "pos_en": "It had been doing for/since ...",
@@ -1460,19 +1460,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He will do",
-        "pos_bn": "সে (পু) করবে",
+        "pos_bn": "সে (পুরুষ) করবে",
         "neg_en": "He will not do",
-        "neg_bn": "সে (পু) করবে না",
+        "neg_bn": "সে (পুরুষ) করবে না",
         "int_en": "Will he do?",
-        "int_bn": "সে (পু) কি করবে?"
+        "int_bn": "সে (পুরুষ) কি করবে?"
       },
       "she": {
         "pos_en": "She will do",
-        "pos_bn": "সে (ম) করবে",
+        "pos_bn": "সে (মহিলা) করবে",
         "neg_en": "She will not do",
-        "neg_bn": "সে (ম) করবে না",
+        "neg_bn": "সে (মহিলা) করবে না",
         "int_en": "Will she do?",
-        "int_bn": "সে (ম) কি করবে?"
+        "int_bn": "সে (মহিলা) কি করবে?"
       },
       "it": {
         "pos_en": "It will do",
@@ -1526,19 +1526,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He will be ...",
-        "pos_bn": "সে (পু) ... হবে",
+        "pos_bn": "সে (পুরুষ) ... হবে",
         "neg_en": "He will not be ...",
-        "neg_bn": "সে (পু) ... হবে না",
+        "neg_bn": "সে (পুরুষ) ... হবে না",
         "int_en": "Will he be ...?",
-        "int_bn": "সে (পু) কি ... হবে?"
+        "int_bn": "সে (পুরুষ) কি ... হবে?"
       },
       "she": {
         "pos_en": "She will be ...",
-        "pos_bn": "সে (ম) ... হবে",
+        "pos_bn": "সে (মহিলা) ... হবে",
         "neg_en": "She will not be ...",
-        "neg_bn": "সে (ম) ... হবে না",
+        "neg_bn": "সে (মহিলা) ... হবে না",
         "int_en": "Will she be ...?",
-        "int_bn": "সে (ম) কি ... হবে?"
+        "int_bn": "সে (মহিলা) কি ... হবে?"
       },
       "it": {
         "pos_en": "It will be ...",
@@ -1592,19 +1592,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He will have ...",
-        "pos_bn": "তার (পু) ... হবে",
+        "pos_bn": "তার (পুরুষ) ... হবে",
         "neg_en": "He will not have ...",
-        "neg_bn": "তার (পু) ... হবে না",
+        "neg_bn": "তার (পুরুষ) ... হবে না",
         "int_en": "Will he has ...?",
-        "int_bn": "তার (পু) কি ... হবে?"
+        "int_bn": "তার (পুরুষ) কি ... হবে?"
       },
       "she": {
         "pos_en": "She will have ...",
-        "pos_bn": "তার (ম) ... হবে",
+        "pos_bn": "তার (মহিলা) ... হবে",
         "neg_en": "She will not have ...",
-        "neg_bn": "তার (ম) ... হবে না",
+        "neg_bn": "তার (মহিলা) ... হবে না",
         "int_en": "Will she has ...?",
-        "int_bn": "তার (ম) কি ... হবে?"
+        "int_bn": "তার (মহিলা) কি ... হবে?"
       },
       "it": {
         "pos_en": "It will have ...",
@@ -1658,19 +1658,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He will be doing",
-        "pos_bn": "সে (পু) করতে থাকবে",
+        "pos_bn": "সে (পুরুষ) করতে থাকবে",
         "neg_en": "He will not be doing",
-        "neg_bn": "সে (পু) করতে থাকবে না",
+        "neg_bn": "সে (পুরুষ) করতে থাকবে না",
         "int_en": "Will you be doing?",
-        "int_bn": "সে (পু) কি করতে থাকবে?"
+        "int_bn": "সে (পুরুষ) কি করতে থাকবে?"
       },
       "she": {
         "pos_en": "She will be doing",
-        "pos_bn": "সে (ম) করতে থাকবে",
+        "pos_bn": "সে (মহিলা) করতে থাকবে",
         "neg_en": "She will not be doing",
-        "neg_bn": "সে (ম) করতে থাকবে না",
+        "neg_bn": "সে (মহিলা) করতে থাকবে না",
         "int_en": "Will she be doing?",
-        "int_bn": "সে (ম) কি করতে থাকবে?"
+        "int_bn": "সে (মহিলা) কি করতে থাকবে?"
       },
       "it": {
         "pos_en": "It will be doing",
@@ -1724,19 +1724,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He will have done",
-        "pos_bn": "সে (পু) করে থাকব",
+        "pos_bn": "সে (পুরুষ) করে থাকব",
         "neg_en": "He will not have done",
-        "neg_bn": "সে (পু) করে থাকব না",
+        "neg_bn": "সে (পুরুষ) করে থাকব না",
         "int_en": "Will He have done?",
-        "int_bn": "সে (পু) কি করে থাকব?"
+        "int_bn": "সে (পুরুষ) কি করে থাকব?"
       },
       "she": {
         "pos_en": "She will have done",
-        "pos_bn": "সে (ম) করে থাকব",
+        "pos_bn": "সে (মহিলা) করে থাকব",
         "neg_en": "She will not have done",
-        "neg_bn": "সে (ম) করে থাকব না",
+        "neg_bn": "সে (মহিলা) করে থাকব না",
         "int_en": "Will She have done?",
-        "int_bn": "সে (ম) কি করে থাকব?"
+        "int_bn": "সে (মহিলা) কি করে থাকব?"
       },
       "it": {
         "pos_en": "It will have done",
@@ -1790,19 +1790,19 @@ const TENSE_REFERENCE = {
       },
       "he": {
         "pos_en": "He will have been doing ... until",
-        "pos_bn": "সে (পু) ... পর্যন্ত করতে থাকবে",
+        "pos_bn": "সে (পুরুষ) ... পর্যন্ত করতে থাকবে",
         "neg_en": "He will not have been doing ... until",
-        "neg_bn": "সে (পু) ... পর্যন্ত করতে থাকবে না",
+        "neg_bn": "সে (পুরুষ) ... পর্যন্ত করতে থাকবে না",
         "int_en": "Will He have been doing ... until?",
-        "int_bn": "সে (পু) কি ... পর্যন্ত করতে থাকবে?"
+        "int_bn": "সে (পুরুষ) কি ... পর্যন্ত করতে থাকবে?"
       },
       "she": {
         "pos_en": "She will have been doing ... until",
-        "pos_bn": "সে (ম) ... পর্যন্ত করতে থাকবে",
+        "pos_bn": "সে (মহিলা) ... পর্যন্ত করতে থাকবে",
         "neg_en": "She will not have been doing ... until",
-        "neg_bn": "সে (ম) ... পর্যন্ত করতে থাকবে না",
+        "neg_bn": "সে (মহিলা) ... পর্যন্ত করতে থাকবে না",
         "int_en": "Will She have been doing ... until?",
-        "int_bn": "সে (ম) কি ... পর্যন্ত করতে থাকবে?"
+        "int_bn": "সে (মহিলা) কি ... পর্যন্ত করতে থাকবে?"
       },
       "it": {
         "pos_en": "It will have been doing ... until",
@@ -1832,8 +1832,8 @@ const SUBJECTS = [
   { id: "we", en: "We", bn: "আমরা", isThirdSingular: false },
   { id: "you_sg", en: "You", bn: "তুমি", isThirdSingular: false },
   { id: "you_pl", en: "You", bn: "তোমরা", isThirdSingular: false },
-  { id: "he", en: "He", bn: "সে (পু)", isThirdSingular: true },
-  { id: "she", en: "She", bn: "সে (ম)", isThirdSingular: true },
+  { id: "he", en: "He", bn: "সে (পুরুষ)", isThirdSingular: true },
+  { id: "she", en: "She", bn: "সে (মহিলা)", isThirdSingular: true },
   { id: "it", en: "It", bn: "এটা", isThirdSingular: true },
   { id: "they", en: "They", bn: "তারা", isThirdSingular: false },
 ];
@@ -1915,7 +1915,152 @@ function conjugate(rawVerb) {
 function verbBnMeaning(rawVerb) {
   const base = (rawVerb || "do").trim().toLowerCase();
   const entry = IRREGULAR_VERBS.find((v) => v.v1.toLowerCase() === base);
-  return entry ? entry.bn : "";
+  if (entry) return entry.bn;
+  return COMMON_REGULAR_VERB_BN[base] || "";
+}
+
+// ---------------------------------------------------------------------
+// Bangla sentence generation for Tense Practice's Positive/Negative/
+// Interrogative pages. Every verb's Bangla gloss (from verbBnMeaning) is
+// itself a Bangla verb — most are "X + light-verb" compounds (আরম্ভ করা,
+// কথা বলা, স্বপ্ন দেখা...) or plain verbs (ভাঙ্গা, লেখা, আসা) ending in a
+// single vowel মাত্রা "া". For that whole class the doc-sourced করা ("do")
+// sentence in TENSE_REFERENCE is reused as a skeleton — swapping its "কর"
+// stem for the new verb's own stem preserves every person/negation
+// idiosyncrasy the doc encodes (gender-marker placement, না vs নাই, etc.)
+// without having to re-derive them. A minority of verbs (ওয়া verbs like
+// যাওয়া/খাওয়া, causative -আনো verbs like ঘুমানো) conjugate on a
+// different pattern and get their own formula instead.
+
+// Lexically-conditioned vowel raising (এ→ই / ও→উ) — not predictable from
+// spelling alone, so only verbs we've confirmed raise are listed.
+const BN_RAISING_STEMS = {
+  "লেখ": "লিখ", // write
+  "শেখ": "শিখ", // learn
+  "শোন": "শুন", // listen
+  "খোল": "খুল", // open
+};
+
+// দেওয়া/নেওয়া conjugate on their own small irregular paradigm.
+const BN_DENA_NEWA = {
+  "দেওয়া": { presAmi: "দিই", presTumi: "দাও", presOther: "দেয়", past: "দি", fut: "দে" },
+  "নেওয়া": { presAmi: "নিই", presTumi: "নাও", presOther: "নেয়", past: "নি", fut: "নে" },
+};
+
+// General ওয়া-class verbs: past tense mutates or is suppletive per verb
+// (a small closed list in Bangla), so it's looked up rather than derived.
+const BN_OWA_VERBS = {
+  "হওয়া": { pres: "হ", past: "হ" },
+  "যাওয়া": { pres: "যা", past: "গে" },
+  "পাওয়া": { pres: "পা", past: "পে" },
+  "খাওয়া": { pres: "খা", past: "খে" },
+  "চাওয়া": { pres: "চা", past: "চাই" },
+  "গাওয়া": { pres: "গা", past: "গাই" },
+  "ধোয়া": { pres: "ধো", past: "ধু" },
+};
+
+// Colloquial/dialectal spelling variants seen in the source doc, folded
+// back to their standard citation form before classification.
+const BN_HEAD_SPELLING_FIXES = {
+  "হত্তয়া": "হওয়া",
+  "পাত্তয়া": "পাওয়া",
+  "দেত্তয়া": "দেওয়া",
+  "দেয়া": "দেওয়া",
+  "নেয়া": "নেওয়া",
+};
+
+function classifyBnVerb(verbBn) {
+  // Bangla text can spell the same grapheme with different underlying
+  // codepoint sequences (e.g. the "য়" in "খাওয়া" as one atomic
+  // character vs. "য" + nukta) depending on the source. NFC-normalize so
+  // lookups against our hardcoded tables match regardless of which form
+  // the source doc used.
+  const parts = (verbBn || "")
+    .normalize("NFC")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  const rawHead = parts[parts.length - 1] || "";
+  const head = BN_HEAD_SPELLING_FIXES[rawHead] || rawHead;
+  const prefix = parts.slice(0, -1).join(" ");
+  const prefixSp = prefix ? prefix + " " : "";
+
+  if (BN_DENA_NEWA[head]) return { type: "dena", prefix: prefixSp, ...BN_DENA_NEWA[head] };
+  if (BN_OWA_VERBS[head]) return { type: "owa", prefix: prefixSp, ...BN_OWA_VERBS[head] };
+  // Causative -আনো verbs (বাকানো, দেখানো...): word-medial "a" is written
+  // as the dependent vowel sign া attached to the preceding consonant,
+  // not the independent letter আ, so match on া-ন-ো / া-ন.
+  if (/ানো$/.test(head)) return { type: "causative", prefix: prefixSp, stem: head.slice(0, -2) };
+  if (/ান$/.test(head)) return { type: "causative", prefix: prefixSp, stem: head.slice(0, -1) };
+  if (/া$/.test(head)) {
+    const rawStem = head.slice(0, -1);
+    return { type: "regular", prefix: prefixSp, stem: BN_RAISING_STEMS[rawStem] || rawStem };
+  }
+  // Fallback for a gloss shape we don't recognize — treat it as an
+  // uninflected regular stem so generation degrades gracefully instead
+  // of crashing.
+  return { type: "regular", prefix: prefixSp, stem: head };
+}
+
+function bnVowelPersonForm(stem, subject) {
+  if (subject.isI || subject.id === "we") return stem + "ই";
+  if (subject.id === "you_sg" || subject.id === "you_pl") return stem + "ও";
+  return stem + "য়";
+}
+
+function bnIndefiniteVerbForm(group, cls, subject) {
+  if (cls.type === "dena") {
+    if (group === "present") {
+      if (subject.isI || subject.id === "we") return cls.presAmi;
+      if (subject.id === "you_sg" || subject.id === "you_pl") return cls.presTumi;
+      return cls.presOther;
+    }
+    const base = group === "future" ? cls.fut : cls.past;
+    if (group === "future") return subject.isI || subject.id === "we" ? base + "ব" : base + "বে";
+    if (subject.isI || subject.id === "we") return base + "লাম";
+    if (subject.id === "you_sg" || subject.id === "you_pl") return base + "লে";
+    return base + "ল";
+  }
+
+  const stem = cls.type === "owa" ? (group === "past" ? cls.past : cls.pres) : cls.stem;
+  if (group === "past") {
+    if (subject.isI || subject.id === "we") return stem + "লাম";
+    if (subject.id === "you_sg" || subject.id === "you_pl") return stem + "লে";
+    return stem + "ল";
+  }
+  if (group === "future") {
+    return subject.isI || subject.id === "we" ? stem + "ব" : stem + "বে";
+  }
+  return bnVowelPersonForm(stem, subject);
+}
+
+// Full Bangla sentence for one (chapter, subject, column) cell of Tense
+// Practice. Returns "" if the verb has no Bangla gloss at all (e.g. a
+// freely-typed custom verb), so callers can fall back to the plain
+// meaning gloss instead.
+function bnConjugatedSentence(group, kind, subjectId, column, verbBn) {
+  if (!verbBn) return "";
+  const cls = classifyBnVerb(verbBn);
+  const subject = SUBJECTS.find((s) => s.id === subjectId);
+  const template = TENSE_REFERENCE[group][kind][subjectId][column + "_bn"];
+
+  if (cls.type === "regular") {
+    return template.replace("কর", cls.prefix + cls.stem);
+  }
+
+  if (kind !== "indefinite") {
+    // Continuous/perfect/perfect-continuous aren't hand-modeled for the
+    // ওয়া/causative/দেওয়া-নেওয়া minority — reuse the করা skeleton with
+    // this verb's stem swapped in. Not textbook-perfect for every one of
+    // these, but always comprehensible Bangla.
+    const fallbackStem = cls.type === "dena" ? cls.past : cls.type === "owa" ? cls.pres : cls.stem;
+    return template.replace("কর", cls.prefix + fallbackStem);
+  }
+
+  const verbForm = cls.prefix + bnIndefiniteVerbForm(group, cls, subject);
+  if (column === "pos") return `${subject.bn} ${verbForm}`;
+  if (column === "neg") return `${subject.bn} ${verbForm} না`;
+  return `${subject.bn} কি ${verbForm}?`;
 }
 
 // ---------------------------------------------------------------------
@@ -2030,9 +2175,13 @@ function buildAuxChart(group, kind) {
 //                   generator.js), not part of the chapter chain.
 // ---------------------------------------------------------------------
 const MODES = [
+  { id: "vocab", en: "Vocabulary", bn: "শব্দভাণ্ডার" },
   { id: "tense", en: "Tense Practice", bn: "টেন্স অনুশীলন" },
-  { id: "irregular", en: "Irregular Verbs Practice", bn: "ইরেগুলার ভার্ব অনুশীলন" },
-  { id: "vocab", en: "Vocabulary Practice", bn: "শব্দভাণ্ডার অনুশীলন" },
+  { id: "regularVerbs", en: "Regular Verbs", bn: "নিয়মিত ভার্ব" },
+  { id: "pos", en: "Parts of Speech", bn: "শব্দের প্রকার" },
+  { id: "synonyms", en: "Synonyms & Antonyms", bn: "সমার্থক ও বিপরীত শব্দ" },
+  { id: "sentence", en: "Sentence Structure", bn: "বাক্য গঠন" },
+  { id: "quiz", en: "Quiz", bn: "কুইজ" },
 ];
 
 // ---------------------------------------------------------------------
@@ -2041,37 +2190,64 @@ const MODES = [
 // for the translation. Bengali is verbatim from the doc; English
 // translations added for the fill-in-the-blank / answer-reveal practice.
 // ---------------------------------------------------------------------
+const POSSESSIVE_PRONOUNS = [
+  { id: "my", en: "My", bn: "আমার" },
+  { id: "your", en: "Your", bn: "তোমার" },
+  { id: "his", en: "His", bn: "তার" },
+  { id: "her", en: "Her", bn: "তার" },
+  { id: "its", en: "Its", bn: "এর" },
+  { id: "our", en: "Our", bn: "আমাদের" },
+  { id: "their", en: "Their", bn: "তাদের" },
+];
+
+// Topics group the 120 words into clear, ordered lessons (the source doc's
+// 4-column layout mixed categories within each column, so this grouping is
+// Claude's own — not from the doc). Next/Prev in the UI walks this list.
+const VOCAB_TOPICS = [
+  { id: "family", en: "Family", bn: "পরিবার" },
+  { id: "body_face", en: "Body: Face & Head", bn: "শরীর: মুখ ও মাথা" },
+  { id: "body_hand", en: "Body: Hands & Arms", bn: "শরীর: হাত" },
+  { id: "body_torso", en: "Body: Torso", bn: "শরীর: ধড়" },
+  { id: "body_leg", en: "Body: Legs & Feet", bn: "শরীর: পা" },
+  { id: "places", en: "Places", bn: "স্থান" },
+  { id: "school", en: "School", bn: "স্কুল" },
+  { id: "house", en: "House & Furniture", bn: "বাড়ি ও আসবাবপত্র" },
+  { id: "clothes", en: "Clothes", bn: "পোশাক" },
+  { id: "food", en: "Food & Kitchen", bn: "খাবার ও রান্নাঘর" },
+  { id: "objects", en: "Objects & Toys", bn: "জিনিসপত্র ও খেলনা" },
+];
+
 const VOCAB_WORDS = [
-  { bn: "কলম", en: "pen" }, { bn: "থানা", en: "police station" }, { bn: "তালু", en: "palate" }, { bn: "মুষ্টি", en: "fist" },
-  { bn: "বই", en: "book" }, { bn: "ছেলে", en: "son" }, { bn: "চোয়াল", en: "jaw" }, { bn: "পাম", en: "palm" },
-  { bn: "স্কুল", en: "school" }, { bn: "মেয়ে", en: "daughter" }, { bn: "গলা", en: "throat" }, { bn: "আঙুল", en: "finger" },
-  { bn: "পরিবার", en: "family" }, { bn: "শরীর", en: "body" }, { bn: "ঘাড়", en: "neck" }, { bn: "বুড়ো আঙুল", en: "thumb" },
-  { bn: "পিতা", en: "father" }, { bn: "মাথা", en: "head" }, { bn: "কাঁধ", en: "shoulder" }, { bn: "সূচক", en: "index finger" },
-  { bn: "মা", en: "mother" }, { bn: "চুল", en: "hair" }, { bn: "বুক", en: "chest" }, { bn: "নখ", en: "nail" },
-  { bn: "ভাই", en: "brother" }, { bn: "কান", en: "ear" }, { bn: "স্তন", en: "breast" }, { bn: "মেরুদণ্ড", en: "spine" },
-  { bn: "বোন", en: "sister" }, { bn: "কপাল", en: "forehead" }, { bn: "হৃদয়", en: "heart" }, { bn: "পাঁজর", en: "rib" },
-  { bn: "দাদা", en: "grandfather" }, { bn: "চোখ", en: "eye" }, { bn: "ফুসফুস", en: "lung" }, { bn: "পেট", en: "stomach" },
-  { bn: "দিদিমা", en: "grandmother" }, { bn: "নাক", en: "nose" }, { bn: "নাড়ি", en: "pulse" }, { bn: "পাকস্থলী", en: "stomach (organ)" },
-  { bn: "গ্রাম", en: "village" }, { bn: "মুখ", en: "face" }, { bn: "বগল", en: "armpit" }, { bn: "কোমর", en: "waist" },
-  { bn: "শহর", en: "city" }, { bn: "দাঁত", en: "tooth" }, { bn: "বাহু", en: "arm" }, { bn: "নাভি", en: "navel" },
-  { bn: "দেশ", en: "country" }, { bn: "ঠোঁট", en: "lip" }, { bn: "হাত", en: "hand" }, { bn: "উরু", en: "thigh" },
-  { bn: "জমি", en: "land" }, { bn: "জিহ্বা", en: "tongue" }, { bn: "কনুই", en: "elbow" }, { bn: "হাঁটু", en: "knee" },
-  { bn: "জেলা", en: "district" }, { bn: "থুতনি", en: "chin" }, { bn: "কব্জি", en: "wrist" }, { bn: "পায়ের সামনের হাড়", en: "shin" },
-  { bn: "পায়ের পেশী", en: "calf" }, { bn: "ক্যাপ", en: "cap" }, { bn: "মসজিদ", en: "mosque" }, { bn: "বোতল", en: "bottle" },
-  { bn: "পা (নিতম্ব থেকে গোড়ালি)", en: "leg" }, { bn: "শ্রেণীকক্ষ", en: "classroom" }, { bn: "জুতা", en: "shoe" }, { bn: "কাপড়", en: "cloth" },
-  { bn: "পা (গোড়ালি থেকে আঙুল)", en: "foot" }, { bn: "শিক্ষক", en: "teacher" }, { bn: "দরজা", en: "door" }, { bn: "প্যান্ট", en: "pants" },
-  { bn: "গোড়ালি", en: "ankle" }, { bn: "ফ্রিজ", en: "fridge" }, { bn: "বিছানা", en: "bed" }, { bn: "পকেট", en: "pocket" },
-  { bn: "ঘর", en: "room" }, { bn: "নাস্তা", en: "breakfast" }, { bn: "বালিশ", en: "pillow" }, { bn: "বোতাম", en: "button" },
-  { bn: "বাড়ি", en: "house" }, { bn: "খাবার", en: "food" }, { bn: "গাছ", en: "tree" }, { bn: "কলার", en: "collar" },
-  { bn: "পোশাক", en: "dress" }, { bn: "ফল", en: "fruit" }, { bn: "পেন্সিল বাক্স", en: "pencil box" }, { bn: "আকাশ", en: "sky" },
-  { bn: "টেবিল", en: "table" }, { bn: "খাবার (নির্দিষ্ট সময়ে)", en: "meal" }, { bn: "ব্যাগ", en: "bag" }, { bn: "নদী", en: "river" },
-  { bn: "বইয়ের তাক", en: "bookshelf" }, { bn: "জুস", en: "juice" }, { bn: "রান্নাঘর", en: "kitchen" }, { bn: "সমুদ্র", en: "sea" },
-  { bn: "আলমিরা", en: "wardrobe" }, { bn: "মোবাইল", en: "mobile phone" }, { bn: "ওয়াশরুম", en: "washroom" }, { bn: "বাগান", en: "garden" },
-  { bn: "খেলনা", en: "toy" }, { bn: "কম্পিউটার", en: "computer" }, { bn: "টয়লেট", en: "toilet" }, { bn: "চাচা", en: "uncle" },
-  { bn: "বল", en: "ball" }, { bn: "ট্রেন", en: "train" }, { bn: "চাবি", en: "key" }, { bn: "তালা", en: "lock" },
-  { bn: "সাইকেল", en: "bicycle" }, { bn: "রাস্তা", en: "road" }, { bn: "গ্লাস", en: "glass" }, { bn: "মাদুর", en: "mat" },
-  { bn: "ব্যাট", en: "bat" }, { bn: "সেতু", en: "bridge" }, { bn: "কাপ", en: "cup" }, { bn: "ছাতা", en: "umbrella" },
-  { bn: "ফুটবল", en: "football" }, { bn: "বাজার", en: "market" }, { bn: "টিশার্ট", en: "t-shirt" }, { bn: "ছাদ", en: "roof" },
+  { bn: "কলম", en: "pen", icon: "🖊️", topic: "school" }, { bn: "থানা", en: "police station", icon: "🚓", topic: "places" }, { bn: "তালু", en: "palate", icon: "👄", topic: "body_face" }, { bn: "মুষ্টি", en: "fist", icon: "✊", topic: "body_hand" },
+  { bn: "বই", en: "book", icon: "📖", topic: "school" }, { bn: "ছেলে", en: "son", icon: "👦", topic: "family" }, { bn: "চোয়াল", en: "jaw", icon: "🦷", topic: "body_face" }, { bn: "পাম", en: "palm", icon: "🖐️", topic: "body_hand" },
+  { bn: "স্কুল", en: "school", icon: "🏫", topic: "school" }, { bn: "মেয়ে", en: "daughter", icon: "👧", topic: "family" }, { bn: "গলা", en: "throat", icon: "🗣️", topic: "body_face" }, { bn: "আঙুল", en: "finger", icon: "👆", topic: "body_hand" },
+  { bn: "পরিবার", en: "family", icon: "👨‍👩‍👧‍👦", topic: "family" }, { bn: "শরীর", en: "body", icon: "🧍", topic: "body_torso" }, { bn: "ঘাড়", en: "neck", icon: "👤", topic: "body_torso" }, { bn: "বুড়ো আঙুল", en: "thumb", icon: "👍", topic: "body_hand" },
+  { bn: "পিতা", en: "father", icon: "👨", topic: "family" }, { bn: "মাথা", en: "head", icon: "🧑", topic: "body_face" }, { bn: "কাঁধ", en: "shoulder", icon: "🤷", topic: "body_torso" }, { bn: "সূচক", en: "index finger", icon: "☝️", topic: "body_hand" },
+  { bn: "মা", en: "mother", icon: "👩", topic: "family" }, { bn: "চুল", en: "hair", icon: "💇", topic: "body_face" }, { bn: "বুক", en: "chest", icon: "👕", topic: "body_torso" }, { bn: "নখ", en: "nail", icon: "💅", topic: "body_hand" },
+  { bn: "ভাই", en: "brother", icon: "👦", topic: "family" }, { bn: "কান", en: "ear", icon: "👂", topic: "body_face" }, { bn: "স্তন", en: "breast", icon: "👚", topic: "body_torso" }, { bn: "মেরুদণ্ড", en: "spine", icon: "🦴", topic: "body_torso" },
+  { bn: "বোন", en: "sister", icon: "👧", topic: "family" }, { bn: "কপাল", en: "forehead", icon: "🤨", topic: "body_face" }, { bn: "হৃদয়", en: "heart", icon: "❤️", topic: "body_torso" }, { bn: "পাঁজর", en: "rib", icon: "🦴", topic: "body_torso" },
+  { bn: "দাদা", en: "grandfather", icon: "👴", topic: "family" }, { bn: "চোখ", en: "eye", icon: "👁️", topic: "body_face" }, { bn: "ফুসফুস", en: "lung", icon: "🫁", topic: "body_torso" }, { bn: "পেট", en: "stomach", icon: "🫃", topic: "body_torso" },
+  { bn: "দিদিমা", en: "grandmother", icon: "👵", topic: "family" }, { bn: "নাক", en: "nose", icon: "👃", topic: "body_face" }, { bn: "নাড়ি", en: "pulse", icon: "💓", topic: "body_torso" }, { bn: "পাকস্থলী", en: "stomach (organ)", icon: "🫃", topic: "body_torso" },
+  { bn: "গ্রাম", en: "village", icon: "🏘️", topic: "places" }, { bn: "মুখ", en: "face", icon: "🙂", topic: "body_face" }, { bn: "বগল", en: "armpit", icon: "🙋", topic: "body_torso" }, { bn: "কোমর", en: "waist", icon: "👖", topic: "body_torso" },
+  { bn: "শহর", en: "city", icon: "🏙️", topic: "places" }, { bn: "দাঁত", en: "tooth", icon: "🦷", topic: "body_face" }, { bn: "বাহু", en: "arm", icon: "💪", topic: "body_hand" }, { bn: "নাভি", en: "navel", icon: "🫃", topic: "body_torso" },
+  { bn: "দেশ", en: "country", icon: "🌍", topic: "places" }, { bn: "ঠোঁট", en: "lip", icon: "👄", topic: "body_face" }, { bn: "হাত", en: "hand", icon: "✋", topic: "body_hand" }, { bn: "উরু", en: "thigh", icon: "🦵", topic: "body_leg" },
+  { bn: "জমি", en: "land", icon: "🏞️", topic: "places" }, { bn: "জিহ্বা", en: "tongue", icon: "👅", topic: "body_face" }, { bn: "কনুই", en: "elbow", icon: "💪", topic: "body_hand" }, { bn: "হাঁটু", en: "knee", icon: "🦵", topic: "body_leg" },
+  { bn: "জেলা", en: "district", icon: "🗺️", topic: "places" }, { bn: "থুতনি", en: "chin", icon: "😶", topic: "body_face" }, { bn: "কব্জি", en: "wrist", icon: "⌚", topic: "body_hand" }, { bn: "পায়ের সামনের হাড়", en: "shin", icon: "🦵", topic: "body_leg" },
+  { bn: "পায়ের পেশী", en: "calf", icon: "🦵", topic: "body_leg" }, { bn: "ক্যাপ", en: "cap", icon: "🧢", topic: "clothes" }, { bn: "মসজিদ", en: "mosque", icon: "🕌", topic: "places" }, { bn: "বোতল", en: "bottle", icon: "🧴", topic: "food" },
+  { bn: "পা (নিতম্ব থেকে গোড়ালি)", en: "leg", icon: "🦵", topic: "body_leg" }, { bn: "শ্রেণীকক্ষ", en: "classroom", icon: "🏫", topic: "school" }, { bn: "জুতা", en: "shoe", icon: "👞", topic: "clothes" }, { bn: "কাপড়", en: "cloth", icon: "🧵", topic: "clothes" },
+  { bn: "পা (গোড়ালি থেকে আঙুল)", en: "foot", icon: "🦶", topic: "body_leg" }, { bn: "শিক্ষক", en: "teacher", icon: "🧑‍🏫", topic: "school" }, { bn: "দরজা", en: "door", icon: "🚪", topic: "house" }, { bn: "প্যান্ট", en: "pants", icon: "👖", topic: "clothes" },
+  { bn: "গোড়ালি", en: "ankle", icon: "🦶", topic: "body_leg" }, { bn: "ফ্রিজ", en: "fridge", icon: "🧊", topic: "house" }, { bn: "বিছানা", en: "bed", icon: "🛏️", topic: "house" }, { bn: "পকেট", en: "pocket", icon: "👖", topic: "clothes" },
+  { bn: "ঘর", en: "room", icon: "🚪", topic: "house" }, { bn: "নাস্তা", en: "breakfast", icon: "🍳", topic: "food" }, { bn: "বালিশ", en: "pillow", icon: "☁️", topic: "house" }, { bn: "বোতাম", en: "button", icon: "🔘", topic: "clothes" },
+  { bn: "বাড়ি", en: "house", icon: "🏠", topic: "house" }, { bn: "খাবার", en: "food", icon: "🍲", topic: "food" }, { bn: "গাছ", en: "tree", icon: "🌳", topic: "objects" }, { bn: "কলার", en: "collar", icon: "👔", topic: "clothes" },
+  { bn: "পোশাক", en: "dress", icon: "👗", topic: "clothes" }, { bn: "ফল", en: "fruit", icon: "🍎", topic: "food" }, { bn: "পেন্সিল বাক্স", en: "pencil box", icon: "✏️", topic: "school" }, { bn: "আকাশ", en: "sky", icon: "☁️", topic: "places" },
+  { bn: "টেবিল", en: "table", icon: "🍽️", topic: "house" }, { bn: "খাবার (নির্দিষ্ট সময়ে)", en: "meal", icon: "🍛", topic: "food" }, { bn: "ব্যাগ", en: "bag", icon: "🎒", topic: "school" }, { bn: "নদী", en: "river", icon: "🌊", topic: "places" },
+  { bn: "বইয়ের তাক", en: "bookshelf", icon: "📚", topic: "house" }, { bn: "জুস", en: "juice", icon: "🧃", topic: "food" }, { bn: "রান্নাঘর", en: "kitchen", icon: "🥘", topic: "house" }, { bn: "সমুদ্র", en: "sea", icon: "🏖️", topic: "places" },
+  { bn: "আলমিরা", en: "wardrobe", icon: "🧥", topic: "house" }, { bn: "মোবাইল", en: "mobile phone", icon: "📱", topic: "objects" }, { bn: "ওয়াশরুম", en: "washroom", icon: "🚿", topic: "house" }, { bn: "বাগান", en: "garden", icon: "🌷", topic: "places" },
+  { bn: "খেলনা", en: "toy", icon: "🧸", topic: "objects" }, { bn: "কম্পিউটার", en: "computer", icon: "💻", topic: "objects" }, { bn: "টয়লেট", en: "toilet", icon: "🚽", topic: "house" }, { bn: "চাচা", en: "uncle", icon: "🧔", topic: "family" },
+  { bn: "বল", en: "ball", icon: "🎾", topic: "objects" }, { bn: "ট্রেন", en: "train", icon: "🚆", topic: "objects" }, { bn: "চাবি", en: "key", icon: "🔑", topic: "objects" }, { bn: "তালা", en: "lock", icon: "🔒", topic: "objects" },
+  { bn: "সাইকেল", en: "bicycle", icon: "🚲", topic: "objects" }, { bn: "রাস্তা", en: "road", icon: "🛣️", topic: "places" }, { bn: "গ্লাস", en: "glass", icon: "🥛", topic: "food" }, { bn: "মাদুর", en: "mat", icon: "🟫", topic: "objects" },
+  { bn: "ব্যাট", en: "bat", icon: "🏏", topic: "objects" }, { bn: "সেতু", en: "bridge", icon: "🌉", topic: "places" }, { bn: "কাপ", en: "cup", icon: "☕", topic: "food" }, { bn: "ছাতা", en: "umbrella", icon: "☂️", topic: "clothes" },
+  { bn: "ফুটবল", en: "football", icon: "⚽", topic: "objects" }, { bn: "বাজার", en: "market", icon: "🛒", topic: "objects" }, { bn: "টিশার্ট", en: "t-shirt", icon: "👕", topic: "clothes" }, { bn: "ছাদ", en: "roof", icon: "🏠", topic: "house" },
 ];
 
 const CHAPTERS = [
@@ -2093,18 +2269,52 @@ const CHAPTERS = [
 function buildChapterRows(chapterIndex, rawVerb) {
   const chapter = CHAPTERS[chapterIndex];
   const f = conjugate(rawVerb);
+  const verbBn = verbBnMeaning(rawVerb);
   const builder = BUILDERS_BY_GROUP[chapter.group][chapter.key];
-  return SUBJECTS.map((s) => ({ id: s.id, en: s.en, bn: s.bn, ...builder(f, s) }));
+  return SUBJECTS.map((s) => ({
+    id: s.id,
+    en: s.en,
+    bn: s.bn,
+    ...builder(f, s),
+    bnPos: bnConjugatedSentence(chapter.group, chapter.key, s.id, "pos", verbBn),
+    bnNeg: bnConjugatedSentence(chapter.group, chapter.key, s.id, "neg", verbBn),
+    bnInt: bnConjugatedSentence(chapter.group, chapter.key, s.id, "int", verbBn),
+  }));
 }
 
 // Verb picker list: irregular verbs (excluding the special "Be" entry) plus
 // a short list of common regular verbs, alphabetically merged.
-const COMMON_REGULAR_VERBS = [
-  "ask", "call", "clean", "climb", "cook", "dance", "help", "jump",
-  "listen", "learn", "like", "live", "look", "love", "open", "play",
-  "start", "stop", "study", "talk", "travel", "visit", "wait", "walk",
-  "want", "wash", "watch", "work",
-];
+const COMMON_REGULAR_VERB_BN = {
+  ask: "জিজ্ঞাসা করা",
+  call: "ডাকা",
+  clean: "পরিষ্কার করা",
+  climb: "বেয়ে উঠা",
+  cook: "রান্না করা",
+  dance: "নাচা",
+  help: "সাহায্য করা",
+  jump: "লাফানো",
+  listen: "শোনা",
+  learn: "শেখা",
+  like: "পছন্দ করা",
+  live: "বাস করা",
+  look: "তাকানো",
+  love: "ভালোবাসা",
+  open: "খোলা",
+  play: "খেলা",
+  start: "শুরু করা",
+  stop: "থামা",
+  study: "পড়াশোনা করা",
+  talk: "কথা বলা",
+  travel: "ভ্রমণ করা",
+  visit: "পরিদর্শন করা",
+  wait: "অপেক্ষা করা",
+  walk: "হাঁটা",
+  want: "চাওয়া",
+  wash: "ধোয়া",
+  watch: "দেখা",
+  work: "কাজ করা",
+};
+const COMMON_REGULAR_VERBS = Object.keys(COMMON_REGULAR_VERB_BN);
 
 function buildVerbList() {
   const irregular = IRREGULAR_VERBS.filter((v) => v.v1.toLowerCase() !== "be").map((v) => v.v1.toLowerCase());
@@ -2113,3 +2323,407 @@ function buildVerbList() {
 }
 
 const VERB_LIST = buildVerbList();
+
+// ---------------------------------------------------------------------
+// Parts of Speech: 8 categories, each with a bilingual definition and a
+// bank of example sentences with the target word marked. Used both for
+// the reference/browse page and as quiz material ("what part of speech
+// is the bold word?").
+// ---------------------------------------------------------------------
+const PARTS_OF_SPEECH = [
+  {
+    id: "noun",
+    en: "Noun",
+    bn: "বিশেষ্য",
+    defEn: "A word that names a person, place, thing, or idea.",
+    defBn: "যে শব্দ দিয়ে কোনো ব্যক্তি, স্থান, বস্তু বা ভাবের নাম বোঝায়।",
+    examples: [
+      { sentence: "The {w} ran fast.", w: "dog" },
+      { sentence: "She lives in {w}.", w: "London" },
+      { sentence: "I love {w}.", w: "music" },
+      { sentence: "The {w} is kind.", w: "teacher" },
+      { sentence: "He bought a new {w}.", w: "car" },
+      { sentence: "{w} is a virtue.", w: "Kindness" },
+    ],
+  },
+  {
+    id: "pronoun",
+    en: "Pronoun",
+    bn: "সর্বনাম",
+    defEn: "A word used in place of a noun.",
+    defBn: "যে শব্দ বিশেষ্যের পরিবর্তে ব্যবহৃত হয়।",
+    examples: [
+      { sentence: "{w} is my sister.", w: "She" },
+      { sentence: "I gave it to {w}.", w: "him" },
+      { sentence: "{w} went home.", w: "They" },
+      { sentence: "This book is {w}.", w: "mine" },
+      { sentence: "{w} is calling?", w: "Who" },
+      { sentence: "{w} knows the answer.", w: "Nobody" },
+    ],
+  },
+  {
+    id: "verb",
+    en: "Verb",
+    bn: "ক্রিয়া",
+    defEn: "A word that shows an action or a state of being.",
+    defBn: "যে শব্দ দিয়ে কোনো কাজ বা অবস্থা বোঝায়।",
+    examples: [
+      { sentence: "She {w} every morning.", w: "runs" },
+      { sentence: "He {w} happy.", w: "is" },
+      { sentence: "They {w} football.", w: "played" },
+      { sentence: "The cat {w} all day.", w: "sleeps" },
+      { sentence: "We {w} English.", w: "study" },
+      { sentence: "She {w} well.", w: "sings" },
+    ],
+  },
+  {
+    id: "adjective",
+    en: "Adjective",
+    bn: "বিশেষণ",
+    defEn: "A word that describes a noun.",
+    defBn: "যে শব্দ বিশেষ্যের গুণ বা বৈশিষ্ট্য প্রকাশ করে।",
+    examples: [
+      { sentence: "It is a {w} flower.", w: "beautiful" },
+      { sentence: "He is very {w}.", w: "tall" },
+      { sentence: "She has a {w} car.", w: "red" },
+      { sentence: "This soup is {w}.", w: "hot" },
+      { sentence: "That is a {w} idea.", w: "clever" },
+      { sentence: "The room looks {w}.", w: "clean" },
+    ],
+  },
+  {
+    id: "adverb",
+    en: "Adverb",
+    bn: "ক্রিয়া বিশেষণ",
+    defEn: "A word that describes a verb, adjective, or another adverb (often ends in -ly).",
+    defBn: "যে শব্দ ক্রিয়া, বিশেষণ বা অন্য একটি ক্রিয়া বিশেষণকে বিশেষিত করে (প্রায়ই -ly দিয়ে শেষ হয়)।",
+    examples: [
+      { sentence: "She sings {w}.", w: "beautifully" },
+      { sentence: "He runs {w}.", w: "fast" },
+      { sentence: "They arrived {w}.", w: "late" },
+      { sentence: "He speaks {w} softly.", w: "very" },
+      { sentence: "She {w} finished her work.", w: "quickly" },
+      { sentence: "He {w} tells the truth.", w: "always" },
+    ],
+  },
+  {
+    id: "preposition",
+    en: "Preposition",
+    bn: "সম্বন্ধ পদ",
+    defEn: "A word that shows the relation of a noun/pronoun to another word (place, time, direction).",
+    defBn: "যে শব্দ বিশেষ্য বা সর্বনামের সাথে অন্য শব্দের সম্পর্ক (স্থান, সময়, দিক) প্রকাশ করে।",
+    examples: [
+      { sentence: "The book is {w} the table.", w: "on" },
+      { sentence: "She lives {w} Dhaka.", w: "in" },
+      { sentence: "We met {w} noon.", w: "at" },
+      { sentence: "He walked {w} school.", w: "to" },
+      { sentence: "The cat is {w} the box.", w: "under" },
+      { sentence: "She sat {w} him.", w: "beside" },
+    ],
+  },
+  {
+    id: "conjunction",
+    en: "Conjunction",
+    bn: "সংযোজক অব্যয়",
+    defEn: "A word that joins words, phrases, or clauses.",
+    defBn: "যে শব্দ দুটি শব্দ, বাক্যাংশ বা বাক্যকে যুক্ত করে।",
+    examples: [
+      { sentence: "I like tea {w} coffee.", w: "and" },
+      { sentence: "She was tired {w} happy.", w: "but" },
+      { sentence: "Wait here {w} I return.", w: "until" },
+      { sentence: "You can have tea {w} coffee.", w: "or" },
+      { sentence: "He stayed home {w} he was sick.", w: "because" },
+      { sentence: "{w} it rained, they went out.", w: "Although" },
+    ],
+  },
+  {
+    id: "interjection",
+    en: "Interjection",
+    bn: "আবেগসূচক অব্যয়",
+    defEn: "A word that expresses sudden feeling or emotion.",
+    defBn: "যে শব্দ হঠাৎ আবেগ বা অনুভূতি প্রকাশ করে।",
+    examples: [
+      { sentence: "{w}! That's amazing.", w: "Wow" },
+      { sentence: "{w}! That hurts.", w: "Ouch" },
+      { sentence: "{w}! We won.", w: "Hurray" },
+      { sentence: "{w}! I forgot my bag.", w: "Oh no" },
+      { sentence: "{w}, what a mess!", w: "Alas" },
+      { sentence: "{w}! Look at that.", w: "Wow" },
+    ],
+  },
+];
+
+// ---------------------------------------------------------------------
+// Synonyms & Antonyms: common words paired with one synonym, one
+// antonym, and a Bangla meaning.
+// ---------------------------------------------------------------------
+const SYNONYMS_ANTONYMS = [
+  { word: "happy", bn: "খুশি", synonym: "joyful", antonym: "sad" },
+  { word: "sad", bn: "দুঃখিত", synonym: "unhappy", antonym: "happy" },
+  { word: "big", bn: "বড়", synonym: "large", antonym: "small" },
+  { word: "small", bn: "ছোট", synonym: "tiny", antonym: "big" },
+  { word: "fast", bn: "দ্রুত", synonym: "quick", antonym: "slow" },
+  { word: "slow", bn: "ধীর", synonym: "sluggish", antonym: "fast" },
+  { word: "hot", bn: "গরম", synonym: "warm", antonym: "cold" },
+  { word: "cold", bn: "ঠান্ডা", synonym: "cool", antonym: "hot" },
+  { word: "easy", bn: "সহজ", synonym: "simple", antonym: "difficult" },
+  { word: "difficult", bn: "কঠিন", synonym: "hard", antonym: "easy" },
+  { word: "beautiful", bn: "সুন্দর", synonym: "pretty", antonym: "ugly" },
+  { word: "ugly", bn: "কুৎসিত", synonym: "unattractive", antonym: "beautiful" },
+  { word: "strong", bn: "শক্তিশালী", synonym: "powerful", antonym: "weak" },
+  { word: "weak", bn: "দুর্বল", synonym: "feeble", antonym: "strong" },
+  { word: "rich", bn: "ধনী", synonym: "wealthy", antonym: "poor" },
+  { word: "poor", bn: "দরিদ্র", synonym: "needy", antonym: "rich" },
+  { word: "brave", bn: "সাহসী", synonym: "courageous", antonym: "cowardly" },
+  { word: "clean", bn: "পরিষ্কার", synonym: "tidy", antonym: "dirty" },
+  { word: "dirty", bn: "নোংরা", synonym: "filthy", antonym: "clean" },
+  { word: "old", bn: "পুরাতন", synonym: "aged", antonym: "young" },
+  { word: "young", bn: "তরুণ", synonym: "youthful", antonym: "old" },
+  { word: "new", bn: "নতুন", synonym: "modern", antonym: "old" },
+  { word: "begin", bn: "শুরু করা", synonym: "start", antonym: "end" },
+  { word: "end", bn: "শেষ করা", synonym: "finish", antonym: "begin" },
+  { word: "buy", bn: "কেনা", synonym: "purchase", antonym: "sell" },
+  { word: "sell", bn: "বিক্রি করা", synonym: "vend", antonym: "buy" },
+  { word: "love", bn: "ভালোবাসা", synonym: "adore", antonym: "hate" },
+  { word: "hate", bn: "ঘৃণা করা", synonym: "dislike", antonym: "love" },
+  { word: "smart", bn: "বুদ্ধিমান", synonym: "intelligent", antonym: "stupid" },
+  { word: "stupid", bn: "বোকা", synonym: "foolish", antonym: "smart" },
+  { word: "kind", bn: "সদয়", synonym: "gentle", antonym: "cruel" },
+  { word: "cruel", bn: "নিষ্ঠুর", synonym: "harsh", antonym: "kind" },
+  { word: "honest", bn: "সৎ", synonym: "truthful", antonym: "dishonest" },
+  { word: "dishonest", bn: "অসৎ", synonym: "deceitful", antonym: "honest" },
+  { word: "polite", bn: "ভদ্র", synonym: "courteous", antonym: "rude" },
+  { word: "rude", bn: "অভদ্র", synonym: "impolite", antonym: "polite" },
+  { word: "early", bn: "তাড়াতাড়ি", synonym: "soon", antonym: "late" },
+  { word: "late", bn: "দেরি", synonym: "delayed", antonym: "early" },
+  { word: "near", bn: "কাছে", synonym: "close", antonym: "far" },
+  { word: "far", bn: "দূরে", synonym: "distant", antonym: "near" },
+  { word: "dark", bn: "অন্ধকার", synonym: "dim", antonym: "light" },
+  { word: "wide", bn: "প্রশস্ত", synonym: "broad", antonym: "narrow" },
+  { word: "narrow", bn: "সরু", synonym: "thin", antonym: "wide" },
+  { word: "tall", bn: "লম্বা", synonym: "high", antonym: "short" },
+  { word: "short", bn: "খাটো", synonym: "low", antonym: "tall" },
+  { word: "heavy", bn: "ভারী", synonym: "weighty", antonym: "light" },
+  { word: "full", bn: "পূর্ণ", synonym: "filled", antonym: "empty" },
+  { word: "empty", bn: "খালি", synonym: "vacant", antonym: "full" },
+  { word: "open", bn: "খোলা", synonym: "unlock", antonym: "close" },
+  { word: "close", bn: "বন্ধ", synonym: "shut", antonym: "open" },
+  { word: "increase", bn: "বৃদ্ধি করা", synonym: "grow", antonym: "decrease" },
+  { word: "decrease", bn: "কমানো", synonym: "reduce", antonym: "increase" },
+  { word: "win", bn: "জেতা", synonym: "succeed", antonym: "lose" },
+  { word: "lose", bn: "হারা", synonym: "fail", antonym: "win" },
+  { word: "true", bn: "সত্য", synonym: "correct", antonym: "false" },
+  { word: "false", bn: "মিথ্যা", synonym: "incorrect", antonym: "true" },
+  { word: "wet", bn: "ভেজা", synonym: "damp", antonym: "dry" },
+  { word: "dry", bn: "শুকনো", synonym: "arid", antonym: "wet" },
+  { word: "remember", bn: "মনে রাখা", synonym: "recall", antonym: "forget" },
+  { word: "forget", bn: "ভুলে যাওয়া", synonym: "overlook", antonym: "remember" },
+  { word: "accept", bn: "গ্রহণ করা", synonym: "agree", antonym: "refuse" },
+  { word: "refuse", bn: "প্রত্যাখ্যান করা", synonym: "reject", antonym: "accept" },
+  { word: "create", bn: "তৈরি করা", synonym: "make", antonym: "destroy" },
+  { word: "destroy", bn: "ধ্বংস করা", synonym: "ruin", antonym: "create" },
+  { word: "arrive", bn: "পৌঁছানো", synonym: "reach", antonym: "depart" },
+  { word: "depart", bn: "প্রস্থান করা", synonym: "leave", antonym: "arrive" },
+];
+
+// ---------------------------------------------------------------------
+// Sentence structure: the core English sentence patterns, for the
+// reference/browse page.
+// ---------------------------------------------------------------------
+const SENTENCE_PATTERNS = [
+  {
+    id: "sv",
+    formula: "Subject + Verb",
+    bnFormula: "কর্তা + ক্রিয়া",
+    examples: ["Birds fly.", "The baby cries.", "Time flies."],
+  },
+  {
+    id: "svo",
+    formula: "Subject + Verb + Object",
+    bnFormula: "কর্তা + ক্রিয়া + কর্ম",
+    examples: ["I eat rice.", "She reads a book.", "They play football."],
+  },
+  {
+    id: "svc",
+    formula: "Subject + Verb + Complement",
+    bnFormula: "কর্তা + ক্রিয়া + পূরক",
+    examples: ["She is a teacher.", "He is happy.", "The soup tastes good."],
+  },
+  {
+    id: "svoo",
+    formula: "Subject + Verb + Indirect Object + Direct Object",
+    bnFormula: "কর্তা + ক্রিয়া + পরোক্ষ কর্ম + সরাসরি কর্ম",
+    examples: ["I gave him a book.", "She told me a story.", "He sent her a letter."],
+  },
+  {
+    id: "svoc",
+    formula: "Subject + Verb + Object + Complement",
+    bnFormula: "কর্তা + ক্রিয়া + কর্ম + কর্মপূরক",
+    examples: ["They made him captain.", "We call her Rita.", "The news made us happy."],
+  },
+];
+
+// Simple sentences used for word-order quiz questions (scramble -> pick
+// the correctly ordered option).
+const WORD_ORDER_SENTENCES = [
+  "I eat rice every day.",
+  "She reads a book quietly.",
+  "The children play in the garden.",
+  "He goes to school by bus.",
+  "We watch television at night.",
+  "My father drinks tea every morning.",
+  "The sun rises in the east.",
+  "Birds fly in the sky.",
+  "She sings a beautiful song.",
+  "They study English at school.",
+  "The dog barks at strangers.",
+  "He writes a letter to his friend.",
+  "My mother cooks delicious food.",
+  "The teacher explains the lesson clearly.",
+  "We visit our grandmother every week.",
+  "The farmer works in the field.",
+  "She dances gracefully on stage.",
+  "I clean my room every Sunday.",
+  "He plays cricket with his friends.",
+  "The baby sleeps peacefully at night.",
+];
+
+// ---------------------------------------------------------------------
+// Quiz engine: builds multiple-choice questions from any content pool
+// already defined above. Pure/deterministic given a shuffle; the actual
+// quiz session state (current question, score) lives in main.js.
+// ---------------------------------------------------------------------
+const QUIZ_POOLS = [
+  { id: "irregular", en: "Irregular Verbs", bn: "ইরেগুলার ভার্ব" },
+  { id: "vocab", en: "Vocabulary", bn: "শব্দভাণ্ডার" },
+  { id: "synonym", en: "Synonyms", bn: "সমার্থক শব্দ" },
+  { id: "antonym", en: "Antonyms", bn: "বিপরীত শব্দ" },
+  { id: "pos", en: "Parts of Speech", bn: "শব্দের প্রকার" },
+  { id: "wordorder", en: "Word Order", bn: "শব্দ ক্রম" },
+];
+
+function pickOptions(correct, distractorPool, count) {
+  const wrongs = shuffle(distractorPool.filter((d) => d !== correct)).slice(0, count - 1);
+  const options = shuffle([correct, ...wrongs]);
+  return { options, correctIndex: options.indexOf(correct) };
+}
+
+function buildIrregularQuestions(count) {
+  const pool = IRREGULAR_VERBS.filter((v) => v.v1.toLowerCase() !== "be");
+  const picked = shuffle(pool).slice(0, Math.min(count, pool.length));
+  return picked.map((v) => {
+    const askV3 = Math.random() < 0.5;
+    const correct = (askV3 ? v.v3 : v.v2).split(/[,/]/)[0].trim();
+    const distractors = pool
+      .filter((o) => o.v1 !== v.v1)
+      .map((o) => (askV3 ? o.v3 : o.v2).split(/[,/]/)[0].trim());
+    const { options, correctIndex } = pickOptions(correct, distractors, 4);
+    return {
+      prompt: askV3 ? `What is the past participle (V3) of "${v.v1}"?` : `What is the past tense (V2) of "${v.v1}"?`,
+      bnHint: v.bn,
+      options,
+      correctIndex,
+    };
+  });
+}
+
+function buildVocabQuestions(count) {
+  const pool = VOCAB_WORDS;
+  const picked = shuffle(pool).slice(0, Math.min(count, pool.length));
+  return picked.map((w) => {
+    const askEn = Math.random() < 0.5;
+    const correct = askEn ? w.en : w.bn;
+    const distractors = pool.filter((o) => o !== w).map((o) => (askEn ? o.en : o.bn));
+    const { options, correctIndex } = pickOptions(correct, distractors, 4);
+    return {
+      prompt: askEn ? `What is the English word for "${w.bn}"?` : `What is the Bangla meaning of "${w.en}"?`,
+      icon: w.icon,
+      options,
+      correctIndex,
+    };
+  });
+}
+
+function buildSynAntQuestions(count, kind) {
+  const pool = SYNONYMS_ANTONYMS;
+  const picked = shuffle(pool).slice(0, Math.min(count, pool.length));
+  const field = kind === "antonym" ? "antonym" : "synonym";
+  return picked.map((w) => {
+    const correct = w[field];
+    const distractors = pool.filter((o) => o.word !== w.word).map((o) => o[field]);
+    const { options, correctIndex } = pickOptions(correct, distractors, 4);
+    return {
+      prompt: `What is a${kind === "antonym" ? "n" : ""} ${kind} of "${w.word}" (${w.bn})?`,
+      options,
+      correctIndex,
+    };
+  });
+}
+
+function buildPosQuestions(count) {
+  const flat = [];
+  PARTS_OF_SPEECH.forEach((cat) => {
+    cat.examples.forEach((ex) => flat.push({ cat, ex }));
+  });
+  const picked = shuffle(flat).slice(0, Math.min(count, flat.length));
+  const allCatNames = PARTS_OF_SPEECH.map((c) => c.en);
+  return picked.map(({ cat, ex }) => {
+    const distractors = allCatNames.filter((n) => n !== cat.en);
+    const { options, correctIndex } = pickOptions(cat.en, distractors, 4);
+    return {
+      prompt: `What part of speech is "${ex.w}" in: "${ex.sentence.replace("{w}", ex.w)}"?`,
+      options,
+      correctIndex,
+    };
+  });
+}
+
+function shuffledWords(sentence) {
+  const words = sentence.replace(/\.$/, "").split(" ");
+  let attempt = shuffle(words);
+  let tries = 0;
+  while (attempt.join(" ") === words.join(" ") && tries < 10) {
+    attempt = shuffle(words);
+    tries++;
+  }
+  return attempt.join(" ") + ".";
+}
+
+function buildWordOrderQuestions(count) {
+  const pool = WORD_ORDER_SENTENCES;
+  const picked = shuffle(pool).slice(0, Math.min(count, pool.length));
+  return picked.map((sentence) => {
+    const wrongVariants = new Set();
+    let guard = 0;
+    while (wrongVariants.size < 3 && guard < 20) {
+      const v = shuffledWords(sentence);
+      if (v !== sentence) wrongVariants.add(v);
+      guard++;
+    }
+    const options = shuffle([sentence, ...Array.from(wrongVariants)]);
+    return {
+      prompt: "Which sentence has the correct word order?",
+      options,
+      correctIndex: options.indexOf(sentence),
+    };
+  });
+}
+
+function buildQuizQuestions(poolId, count) {
+  switch (poolId) {
+    case "irregular":
+      return buildIrregularQuestions(count);
+    case "vocab":
+      return buildVocabQuestions(count);
+    case "synonym":
+      return buildSynAntQuestions(count, "synonym");
+    case "antonym":
+      return buildSynAntQuestions(count, "antonym");
+    case "pos":
+      return buildPosQuestions(count);
+    case "wordorder":
+      return buildWordOrderQuestions(count);
+    default:
+      return buildVocabQuestions(count);
+  }
+}
