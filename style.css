@@ -844,6 +844,26 @@ table {
     grid-auto-flow: row;
 }
 
+/* V1 → V2 → V3 given line: 3 equal-width word columns (left/middle/right)
+   so the same form always lines up under the row above it, however short
+   or long the words are — the arrows sit between as their own narrow
+   columns and don't eat into that equal split. */
+.verb-form-list .vocab-given {
+    /* .vocab-given is a flex child of .vocab-card-row with no flex-grow,
+       so by default it shrink-wraps to its content — leaving the grid
+       below nothing to distribute and making its "1fr" columns collapse
+       to content width instead of splitting evenly. flex-grow here lets
+       it claim the row's full remaining width first. */
+    flex: 1 1 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: baseline;
+}
+
+.verb-form-col {
+    min-width: 0;
+}
+
 .verb-form-note {
     font-size: 0.65em;
     font-weight: 600;
@@ -854,6 +874,7 @@ table {
     color: #94a3b8;
     font-weight: 400;
     padding: 0 0.15em;
+    text-align: center;
 }
 
 .vocab-blank .answer {

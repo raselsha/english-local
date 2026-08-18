@@ -131,7 +131,12 @@ function renderRegularVerbsPage(page, settings) {
       const v1Given = dirBnGiven ? v.bn : v.v1;
       const v1Answer = dirBnGiven ? v.v1 : v.bn;
       const noteHtml = v.note && !dirBnGiven ? ` <span class="verb-form-note">${esc(v.note)}</span>` : "";
-      const given = `${esc(v1Given)}${noteHtml} <span class="verb-form-arrow">→</span> ${esc(v.v2)} <span class="verb-form-arrow">→</span> ${esc(v.v3)}`;
+      const given =
+        `<span class="verb-form-col">${esc(v1Given)}${noteHtml}</span>` +
+        `<span class="verb-form-arrow">→</span>` +
+        `<span class="verb-form-col">${esc(v.v2)}</span>` +
+        `<span class="verb-form-arrow">→</span>` +
+        `<span class="verb-form-col">${esc(v.v3)}</span>`;
       return `
       <div class="vocab-card">
         <div class="vocab-card-row">
