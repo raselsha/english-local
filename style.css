@@ -870,6 +870,26 @@ table {
     color: #64748b;
 }
 
+/* Below ~560px the three "1fr" grid tracks can't shrink below their
+   own word's min-content width (a plain `1fr` track has an implicit
+   `auto` minimum), so the columns overflow into each other and the
+   words visually overlap. Stack V1/V2/V3 as separate lines instead —
+   the cross-card column alignment above this width no longer applies
+   at single-column phone widths anyway. */
+@media (max-width: 560px) {
+    .verb-form-list .vocab-given {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .verb-form-list .verb-form-arrow {
+        transform: rotate(90deg);
+        margin: 2px 0 2px 0.3em;
+    }
+}
+
 .verb-form-arrow {
     color: #94a3b8;
     font-weight: 400;
