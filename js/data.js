@@ -2248,7 +2248,7 @@ const VOCAB_WORDS = [
   { bn: "সাইকেল", en: "bicycle", icon: "🚲", topic: "objects" }, { bn: "রাস্তা", en: "road", icon: "🛣️", topic: "places" }, { bn: "গ্লাস", en: "glass", icon: "🥛", topic: "food" }, { bn: "মাদুর", en: "mat", icon: "🟫", topic: "objects" },
   { bn: "ব্যাট", en: "bat", icon: "🏏", topic: "objects" }, { bn: "সেতু", en: "bridge", icon: "🌉", topic: "places" }, { bn: "কাপ", en: "cup", icon: "☕", topic: "food" }, { bn: "ছাতা", en: "umbrella", icon: "☂️", topic: "clothes" },
   { bn: "ফুটবল", en: "football", icon: "⚽", topic: "objects" }, { bn: "বাজার", en: "market", icon: "🛒", topic: "objects" }, { bn: "টিশার্ট", en: "t-shirt", icon: "👕", topic: "clothes" }, { bn: "ছাদ", en: "roof", icon: "🏠", topic: "house" },
-  { bn: "শিরা", en: "vein", icon: "🩸", topic: "body_torso" }, { bn: "রগ", en: "nerve", icon: "🧠", topic: "body_torso" },
+  { bn: "শিরা", en: "vein", icon: "🩸", topic: "body_torso" }, { bn: "রগ", en: "nerve", icon: "⚡", topic: "body_torso" },
 ];
 
 const CHAPTERS = [
